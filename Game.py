@@ -566,8 +566,13 @@ class GameUI:
                         if self.visual:
                             self.draw_game()
                             pygame.display.flip()
-                            # Control frame rate
-                            self.clock.tick(60)
+                        if self.visual:
+                            if self.speed == "Slow":
+                                self.clock.tick(10)
+                            elif self.speed == "Normal":
+                                self.clock.tick(20)
+                            elif self.speed == "Fast":
+                                self.clock.tick(60)
                     if not running:
                         break
                     snake_length = self.game.board.snake.length
