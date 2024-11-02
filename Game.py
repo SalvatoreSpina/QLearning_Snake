@@ -27,6 +27,17 @@ DIRECTIONS = {
     "RIGHT": (0, 1),
 }
 
+# Mapping from direction vectors to names
+DIRECTION_VECTORS_TO_NAMES = {v: k for k, v in DIRECTIONS.items()}
+
+# Opposite directions mapping
+OPPOSITE_DIRECTIONS = {
+    "UP": "DOWN",
+    "DOWN": "UP",
+    "LEFT": "RIGHT",
+    "RIGHT": "LEFT"
+}
+
 # Apple Class
 class Apple:
     def __init__(self, color: str, position: Tuple[int, int]):
@@ -35,11 +46,13 @@ class Apple:
 
 # Snake Class
 class Snake:
-    def __init__(self, initial_position: List[Tuple[int, int]]):
+    def __init__(self, initial_position: List[Tuple[int, int]], initial_direction: Tuple[int, int]):
         self.body = initial_position
         self.length = len(self.body)
+        self.direction = initial_direction  # Store the current direction
 
     def move(self, direction: Tuple[int, int], board_size: int):
+        self.direction = direction  # Update the direction
         new_head = (self.body[0][0] + direction[0], self.body[0][1] + direction[1])
         if 0 <= new_head[0] < board_size and 0 <= new_head[1] < board_size:
             self.body = [new_head] + self.body[:-1]
@@ -79,9 +92,9 @@ class Board:
                 else:
                     break
             if len(initial_position) == 3:
-                self.snake = Snake(initial_position)
-                for segment in initial_position:
-                    self.grid[segment[0]][segment[1]] = CellType.SNAKE
+                initial_direction = (initial_position[0][0] - initial_position[1][0],
+                                     initial_position[0][1] - initial_position[1][1])
+                self.snake = Snake(initial_position, initial_direction)
                 break
 
     def place_apples(self):
@@ -111,90 +124,165 @@ class Board:
         head = self.snake.body[0]
         self.grid[head[0]][head[1]] = CellType.HEAD
 
-    def get_vision(self) -> dict:
+    def get_vision(self):
+        """Get the snake's vision in all four directions for display purposes."""
         head_x, head_y = self.snake.body[0]
         vision = {}
         for direction_name, (dx, dy) in DIRECTIONS.items():
-            x, y = head_x + dx, head_y + dy
             cells_in_direction = []
+            x, y = head_x + dx, head_y + dy
             while 0 <= x < self.size and 0 <= y < self.size:
                 cell = self.grid[x][y]
                 cells_in_direction.append(cell.value)
-                if cell in {CellType.SNAKE, CellType.GREEN_APPLE, CellType.RED_APPLE}:
-                    break  # Stop vision when an obstacle or apple is encountered
+                if cell in {CellType.SNAKE, CellType.WALL}:
+                    break  # Stop vision when an obstacle is encountered
                 x += dx
                 y += dy
             else:
-                cells_in_direction.append(CellType.WALL.value)
+                cells_in_direction.append(CellType.WALL.value)  # Edge of the board
             vision[direction_name] = cells_in_direction
         return vision
 
-# Game Class
 class Game:
-    def __init__(self, board_size: int, agent, print_terminal=True, step_by_step=False):
+    def __init__(self, board_size: int, agent, print_terminal=True):
         self.board_size = board_size
         self.board = Board(board_size)
         self.is_game_over = False
-        self.agent = agent  # Use the provided agent
+        self.agent = agent
         self.previous_state = None
         self.previous_action = None
+        self.current_state = None  # Store the current state
         self.is_paused = False
         self.apple_eaten = None
         self.print_terminal = print_terminal
-        self.step_by_step = step_by_step
 
     def start(self):
         self.board.initialize_snake()
         self.board.place_apples()
         self.board.update_board()
+        
+    def get_food_direction(self, current_direction):
+        head_x, head_y = self.board.snake.body[0]
+        food_x, food_y = None, None
+
+        # Find the green apple within line of sight
+        for apple in self.board.apples:
+            if apple.color == 'green':
+                # Check if apple is in line of sight
+                dx = apple.position[0] - head_x
+                dy = apple.position[1] - head_y
+                if dx == 0 and dy == 0:
+                    continue  # It's on the snake's head
+                dir_x, dir_y = current_direction
+                if (dx * dir_x > 0 and dy == 0) or (dy * dir_y > 0 and dx == 0):
+                    food_x, food_y = apple.position
+                    break
+
+        # If food is not in line of sight, return [0, 0, 0]
+        if food_x is None:
+            return [0, 0, 0]
+
+        # Determine relative direction
+        if current_direction == (-1, 0):  # Up
+            if food_y < head_y:
+                return [1, 0, 0]  # Left
+            elif food_y > head_y:
+                return [0, 0, 1]  # Right
+            else:
+                return [0, 1, 0]  # Straight
+        elif current_direction == (1, 0):  # Down
+            if food_y > head_y:
+                return [1, 0, 0]  # Left
+            elif food_y < head_y:
+                return [0, 0, 1]  # Right
+            else:
+                return [0, 1, 0]  # Straight
+        elif current_direction == (0, -1):  # Left
+            if food_x > head_x:
+                return [1, 0, 0]  # Left
+            elif food_x < head_x:
+                return [0, 0, 1]  # Right
+            else:
+                return [0, 1, 0]  # Straight
+        elif current_direction == (0, 1):  # Right
+            if food_x < head_x:
+                return [1, 0, 0]  # Left
+            elif food_x > head_x:
+                return [0, 0, 1]  # Right
+            else:
+                return [0, 1, 0]  # Straight
+
+        return [0, 0, 0]
 
     def run_step(self):
         if not self.is_game_over and not self.is_paused:
-            # Get the snake's vision
-            vision = self.board.get_vision()
-            state = self.agent.get_state(vision)
-            # Agent makes a decision based on vision
-            action = self.agent.choose_action(state)
+            # Get the snake's state
+            state = self.agent.get_state(self)
+            self.current_state = state  # Store the current state
+
+            # Get valid actions
+            current_dir = self.board.snake.direction
+            current_dir_name = DIRECTION_VECTORS_TO_NAMES[current_dir]
+            opposite_dir_name = OPPOSITE_DIRECTIONS[current_dir_name]
+            valid_actions = [action for action in DIRECTIONS.keys() if action != opposite_dir_name]
+            # Agent makes a decision based on state
+            action = self.agent.choose_action(state, valid_actions)
             direction = DIRECTIONS[action]
+
             try:
                 self.board.snake.move(direction, self.board.size)
                 self._handle_collisions()
                 self.check_game_over()
                 self.board.update_board()
-                # Get reward
-                reward = self.get_reward()
-                # Get next state
-                next_vision = self.board.get_vision()
-                next_state = self.agent.get_state(next_vision)
+
+                # Calculate reward based on previous and current state
+                reward = self.get_reward(self.previous_state, state, action)
+
                 # Learn from the experience
                 if self.previous_state is not None and self.previous_action is not None:
-                    self.agent.learn(self.previous_state, self.previous_action, reward, next_state)
+                    self.agent.learn(self.previous_state, self.previous_action, reward, state)
                 # Update previous state and action
                 self.previous_state = state
                 self.previous_action = action
-                # Display vision and action
+
+                # Display state and action
                 if self.print_terminal:
-                    self.display_state_and_action(vision, action)
-                # Handle step-by-step execution
-                if self.step_by_step:
-                    input("Press Enter to continue...")
+                    self.display_state_and_action(state, action)
             except IndexError:
                 self.is_game_over = True
-                reward = -100  # Large negative reward for game over
+                reward = -200  # Penalty for moving out of bounds
                 # Learn from the final move
                 if self.previous_state is not None and self.previous_action is not None:
                     self.agent.learn(self.previous_state, self.previous_action, reward, state)
 
-    def get_reward(self):
-        # Define rewards based on events
+    def get_reward(self, prev_state, current_state, action):
         if self.is_game_over:
-            return -10  # Large negative reward
+            return -10  # Penalty for dying
         elif self.apple_eaten == "green":
-            return 10  # Positive reward
-        elif self.apple_eaten == "red":
-            return -5  # Negative reward
+            return 10   # Reward for eating green apple
         else:
-            return -1  # Small negative reward for each step without eating
+            return 0  # No penalty per step
+
+
+    def get_obstacle_distances(self):
+        head_x, head_y = self.board.snake.body[0]
+        obstacle_distances = {}
+
+        for direction_name, (dx, dy) in DIRECTIONS.items():
+            distance = 0
+            x, y = head_x + dx, head_y + dy
+
+            while 0 <= x < self.board.size and 0 <= y < self.board.size:
+                cell = self.board.grid[x][y]
+                if cell == CellType.SNAKE or cell == CellType.WALL:
+                    break
+                x += dx
+                y += dy
+                distance += 1
+
+            obstacle_distances[direction_name] = distance
+
+        return obstacle_distances
 
     def _handle_collisions(self):
         head = self.board.snake.body[0]
@@ -220,10 +308,8 @@ class Game:
         elif self.board.snake.length == 0:
             self.is_game_over = True
 
-    def display_state_and_action(self, vision, action):
-        print("Snake Vision:")
-        for direction, cells in vision.items():
-            print(f"{direction}: {''.join(cells)}")
+    def display_state_and_action(self, state, action):
+        print(f"State: {state}")
         print(f"Action Taken: {action}\n")
 
 # ConfigScreen Class
@@ -355,7 +441,6 @@ class ConfigScreen:
         else:
             self.ui.screen = None
 
-# GameUI Class
 class GameUI:
     def __init__(self, board_size=BOARD_SIZE, sessions=1, save_file='', load_file='', visual=True, learn=True, speed='Normal', print_terminal=True, step_by_step=False):
         self.visual = visual  # Default to visual on
@@ -372,7 +457,10 @@ class GameUI:
         self.max_duration = 0
         self.game = None
         self.agent = Agent()
+        self.wait_for_step = False  # Used to control step-by-step execution
         if self.visual:
+            import pygame
+            pygame.init()
             self.WINDOW_WIDTH, self.WINDOW_HEIGHT = pygame.display.Info().current_w, pygame.display.Info().current_h
             self.screen = pygame.display.set_mode((self.WINDOW_WIDTH, self.WINDOW_HEIGHT))
             self.clock = pygame.time.Clock()
@@ -439,7 +527,7 @@ class GameUI:
                     self.game.start()
                     steps = 0
                     self.wait_for_step = self.step_by_step  # Initialize wait state
-                    while not self.game.is_game_over:
+                    while not self.game.is_game_over and running:
                         # Handle events
                         for event in pygame.event.get():
                             if event.type == pygame.QUIT:
@@ -456,19 +544,11 @@ class GameUI:
                             steps += 1
                             if self.step_by_step:
                                 self.wait_for_step = True  # Wait for the next spacebar press
-                            if self.visual:
-                                self.draw_game()
-                                pygame.display.flip()
-                                # Adjust game speed
-                                if self.speed == "Slow":
-                                    pygame.time.delay(200)
-                                elif self.speed == "Normal":
-                                    pygame.time.delay(100)
-                                elif self.speed == "Fast":
-                                    pygame.time.delay(10)
-                        else:
-                            # Wait and process events
-                            pygame.time.delay(100)
+                        if self.visual:
+                            self.draw_game()
+                            pygame.display.flip()
+                            # Control frame rate
+                            self.clock.tick(60)
                     if not running:
                         break
                     snake_length = self.game.board.snake.length
@@ -485,17 +565,17 @@ class GameUI:
                     self.state = "config"
                 else:
                     running = False
-
+            else:
+                # Default state handling
+                pass
             if self.visual:
-                pygame.display.flip()
                 self.clock.tick(60)
-
         if self.visual:
             pygame.quit()
-        
-        if not self.visual:
-            return {'max_length': self.max_length, 'max_duration': self.max_duration}
 
+        if not self.visual:
+            # Print stats to terminal
+            print(f"Training completed. Max length: {self.max_length}, Max duration: {self.max_duration}")
 
     def draw_game(self):
         """Draw the game elements on the screen."""
@@ -551,6 +631,19 @@ class GameUI:
             y += 30
         if action:
             self.render_text(f"Action Taken: {action}", x, y, center=False)
+            y += 30
+
+        # --- New Code to Display Q-values ---
+        # Retrieve Q-values for the current state
+        current_state = self.game.current_state
+        q_values = self.game.agent.q_table.get(current_state, {})
+        self.render_text("Q-values:", x, y, center=False)
+        y += 30
+        for action_name in DIRECTIONS.keys():
+            value = q_values.get(action_name, 0)
+            text = f"{action_name}: {value:.2f}"
+            self.render_text(text, x, y, center=False)
+            y += 30
 
     def display_runtime_info(self):
         import pygame
