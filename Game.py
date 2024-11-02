@@ -257,11 +257,30 @@ class Game:
 
     def get_reward(self, prev_state, current_state, action):
         if self.is_game_over:
-            return -10  # Penalty for dying
-        elif self.apple_eaten == "green":
-            return 10   # Reward for eating green apple
-        else:
-            return 0  # No penalty per step
+            return -100  # Major penalty for dying
+        
+        if self.apple_eaten == "green":
+            return 50   # Big reward for eating green apple
+        
+        if self.apple_eaten == "red":
+            return -50  # Penalty for eating red apple
+        
+        # Extract green apple distances from state (every third element starting from index 1)
+        prev_green_distances = [prev_state[i] for i in range(1, len(prev_state), 3)] if prev_state else None
+        current_green_distances = [current_state[i] for i in range(1, len(current_state), 3)]
+        
+        # If there was a visible green apple and we moved closer to it
+        if prev_green_distances:
+            prev_min_dist = min([d for d in prev_green_distances if d > 0], default=0)
+            current_min_dist = min([d for d in current_green_distances if d > 0], default=0)
+            
+            if prev_min_dist > 0 and current_min_dist > 0:
+                if current_min_dist < prev_min_dist:
+                    return 10  # Reward for moving closer to green apple
+                elif current_min_dist > prev_min_dist:
+                    return -5  # Small penalty for moving away from visible green apple
+        
+        return -1  # Small penalty for each move to encourage efficiency
 
 
     def get_obstacle_distances(self):
