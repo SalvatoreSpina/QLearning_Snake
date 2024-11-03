@@ -59,22 +59,21 @@ elif args.test_type == 'best_model':
     subprocess.run(command)
 
 elif args.test_type == 'superbonus' or args.test_type == 'visualize_superbonus':
-    model_file = f'model_{10000}.txt'
+    model_file = f'model_{1000000}.txt'
     model_path = os.path.join(model_directory, model_file)
+    
+    sessionss_count = 1000 if args.test_type == 'superbonus' else 10
+    visual = 'on' if args.test_type == 'visualize_superbonus' else 'off'
     
     command = [
         'python3', 'main.py',
-        '-sessions', '1000',
-        '-board', '100',
+        '-sessions', str(sessionss_count),
+        '-board', '20',
         '-load', model_path,
-        '-visual', 'off',
-        '-learn', 'on',
+        '-visual', visual,
+        '-learn', 'off',
         '-print', 'off'
     ]
-    
-    if args.test_type == 'visualize_superbonus':
-        command['-sessions'] = '10'
-        command['-visual'] = 'on'
     
     print(f"Executing: {' '.join(command)}")
     subprocess.run(command)
