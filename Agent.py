@@ -12,51 +12,34 @@ class Agent:
         self.epsilon_min = 0.05
         self.learning = True
 
-    def get_state(self, game):
-        """
-        Get state as binary features based on first visible object in each direction:
-        - 4 danger features (up, right, down, left) for wall or snake
-        - 4 green apple features (up, right, down, left)
-        - 4 red apple features (up, right, down, left)
-        Returns a tuple of 12 binary values (0 or 1)
-        """
-        head_x, head_y = game.board.snake.body[0]
-        directions = [(-1, 0), (0, 1), (1, 0), (0, -1)]  # UP, RIGHT, DOWN, LEFT
-        
-        danger_state = []
-        green_apple_state = []
-        red_apple_state = []
+    def get_state(self, vision):
+        # Initialize lists for danger, green apple, and red apple
+        danger_state = [False, False, False, False]
+        green_apple_state = [False, False, False, False]
+        red_apple_state = [False, False, False, False]
 
-        # Look in each direction
-        for dx, dy in directions:
-            x, y = head_x, head_y
-            found_object = False
-            
-            # Look until we find something or hit a wall
-            while 0 <= x + dx < game.board.size and 0 <= y + dy < game.board.size:
-                x += dx
-                y += dy
-                cell = game.board.grid[x][y]
-                
-                if cell != CellType.EMPTY:
-                    found_object = True
-                    # Record what we found (only the first object)
-                    danger_state.append(1 if cell == CellType.SNAKE or 
-                                     x + dx < 0 or x + dx >= game.board.size or 
-                                     y + dy < 0 or y + dy >= game.board.size else 0)
-                    green_apple_state.append(1 if cell == CellType.GREEN_APPLE else 0)
-                    red_apple_state.append(1 if cell == CellType.RED_APPLE else 0)
-                    break
-            
-            # If we found nothing in this direction
-            if not found_object:
-                # Wall is the first thing we'll hit
-                danger_state.append(1)
-                green_apple_state.append(0)
-                red_apple_state.append(0)
+        # Mapping vision directions to danger, green apple, and red apple state
+        directions = ['UP', 'DOWN', 'LEFT', 'RIGHT']
+        for i, direction in enumerate(directions):
+            if direction in vision:
+                tiles = vision[direction]
+                for j, tile in enumerate(tiles):
+                    if j == 0 and (tile == 'W' or tile == 'S'):
+                        danger_state[i] = True
+                        break
+                    elif j == 1 and (tile == 'W' or tile == 'S'):
+                        danger_state[i] = True
+                        break
+                    elif j < 3 and tile == 'R':
+                        red_apple_state[i] = True
+                        break
+                    elif tile == 'G':
+                        green_apple_state[i] = True
+                        break
 
-        # Combine all states into one tuple
+        # Final state is a tuple of the three lists concatenated
         state = tuple(danger_state + green_apple_state + red_apple_state)
+        # print("State:", state)
         return state
 
     def choose_action(self, state, valid_actions):
@@ -102,4 +85,5 @@ class Agent:
         import pickle
         with open(filename, 'rb') as f:
             self.q_table = pickle.load(f)
+            print("Loaded model has a q_table of size:", len(self.q_table))
         print(f"Model loaded from {filename}")

@@ -131,17 +131,16 @@ class Board:
         for direction_name, (dx, dy) in DIRECTIONS.items():
             cells_in_direction = []
             x, y = head_x + dx, head_y + dy
-        while 0 <= x < self.size and 0 <= y < self.size:
-            cell = self.grid[x][y]
-            cells_in_direction.append(cell.value)
-            if cell == CellType.WALL or cell == CellType.SNAKE:
-                break
-            # Update x and y here based on the direction
-            x += dx
-            y += dy
-        else:
-            cells_in_direction.append(CellType.WALL.value)  # Edge of the board
-        vision[direction_name] = cells_in_direction
+            while 0 <= x < self.size and 0 <= y < self.size:
+                cell = self.grid[x][y]
+                cells_in_direction.append(cell.value)
+                if cell == CellType.WALL or cell == CellType.SNAKE:
+                    break
+                x += dx
+                y += dy
+            else:
+                cells_in_direction.append(CellType.WALL.value)  # Edge of the board
+            vision[direction_name] = cells_in_direction
         return vision
 
 class Game:
@@ -218,7 +217,8 @@ class Game:
     def run_step(self):
         if not self.is_game_over and not self.is_paused:
             # Get the snake's state
-            state = self.agent.get_state(self)
+            state = self.board.get_vision()
+            state = self.agent.get_state(state)
             self.current_state = state  # Store the current state
 
             # Get valid actions
@@ -266,7 +266,7 @@ class Game:
         if self.apple_eaten == "red":
             return -50  # Penalty for eating red apple
         
-        return 0  # Small penalty for each move to encourage efficiency
+        return -1  # Small penalty for each move to encourage efficiency
 
 
     def get_obstacle_distances(self):

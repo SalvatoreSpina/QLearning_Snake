@@ -40,7 +40,6 @@ if args.test_type == 'test_model':
         
         # Run the command
         print(f"Testing model: {model_path}")
-        print(f"Command: {' '.join(command)}")
         subprocess.run(command)
 else:
     print(f"Unknown test type: {args.test_type}")
