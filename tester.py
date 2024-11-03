@@ -32,14 +32,15 @@ if args.test_type == 'test_model':
         command = [
             'python3', 'main.py',
             '-sessions', '10',
-            '-learn', 'off',
-            '-visual', 'off',
-            '-print', 'off',
             '-load', model_path,
+            '-visual', 'off',
+            '-learn', 'off',
+            '-print', 'off'
         ]
         
         # Run the command
-        print(f"Testing model: {model_path}")
+        print(f"Executing: {' '.join(command)}")
         subprocess.run(command)
+        print("--------------------")
 else:
     print(f"Unknown test type: {args.test_type}")

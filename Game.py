@@ -160,59 +160,6 @@ class Game:
         self.board.initialize_snake()
         self.board.place_apples()
         self.board.update_board()
-        
-    def get_food_direction(self, current_direction):
-        head_x, head_y = self.board.snake.body[0]
-        food_x, food_y = None, None
-
-        # Find the green apple within line of sight
-        for apple in self.board.apples:
-            if apple.color == 'green':
-                # Check if apple is in line of sight
-                dx = apple.position[0] - head_x
-                dy = apple.position[1] - head_y
-                if dx == 0 and dy == 0:
-                    continue  # It's on the snake's head
-                dir_x, dir_y = current_direction
-                if (dx * dir_x > 0 and dy == 0) or (dy * dir_y > 0 and dx == 0):
-                    food_x, food_y = apple.position
-                    break
-
-        # If food is not in line of sight, return [0, 0, 0]
-        if food_x is None:
-            return [0, 0, 0]
-
-        # Determine relative direction
-        if current_direction == (-1, 0):  # Up
-            if food_y < head_y:
-                return [1, 0, 0]  # Left
-            elif food_y > head_y:
-                return [0, 0, 1]  # Right
-            else:
-                return [0, 1, 0]  # Straight
-        elif current_direction == (1, 0):  # Down
-            if food_y > head_y:
-                return [1, 0, 0]  # Left
-            elif food_y < head_y:
-                return [0, 0, 1]  # Right
-            else:
-                return [0, 1, 0]  # Straight
-        elif current_direction == (0, -1):  # Left
-            if food_x > head_x:
-                return [1, 0, 0]  # Left
-            elif food_x < head_x:
-                return [0, 0, 1]  # Right
-            else:
-                return [0, 1, 0]  # Straight
-        elif current_direction == (0, 1):  # Right
-            if food_x < head_x:
-                return [1, 0, 0]  # Left
-            elif food_x > head_x:
-                return [0, 0, 1]  # Right
-            else:
-                return [0, 1, 0]  # Straight
-
-        return [0, 0, 0]
 
     def run_step(self):
         if not self.is_game_over and not self.is_paused:
@@ -237,7 +184,7 @@ class Game:
                 self.board.update_board()
 
                 # Calculate reward based on previous and current state
-                reward = self.get_reward(self.previous_state, state, action)
+                reward = self.get_reward(state, action)
 
                 # Learn from the experience
                 if self.previous_state is not None and self.previous_action is not None:
@@ -256,16 +203,26 @@ class Game:
                 if self.previous_state is not None and self.previous_action is not None:
                     self.agent.learn(self.previous_state, self.previous_action, reward, state)
 
-    def get_reward(self, prev_state, current_state, action):
+    def get_reward(self, current_state, action):
+        directions = ['UP', 'DOWN', 'LEFT', 'RIGHT']
+        action_index = directions.index(action)
+
+        danger_state = current_state[:4]
+        green_apple_state = current_state[4:8]
+        red_apple_state = current_state[8:]
+
         if self.is_game_over:
             return -100  # Major penalty for dying
-        
-        if self.apple_eaten == "green":
-            return 100   # Big reward for eating green apple
-        
-        if self.apple_eaten == "red":
-            return -50  # Penalty for eating red apple
-        
+
+        if danger_state[action_index]:
+            return -50  # Penalty for moving towards danger
+
+        if green_apple_state[action_index]:
+            return 100  # Big reward for moving towards green apple
+
+        if red_apple_state[action_index]:
+            return -20  # Penalty for moving towards red apple
+
         return -1  # Small penalty for each move to encourage efficiency
 
 
@@ -537,8 +494,7 @@ class GameUI:
                                 break
                             elif event.type == pygame.KEYDOWN:
                                 if event.key == pygame.K_SPACE:
-                                    if self.wait_for_step:
-                                        self.wait_for_step = False  # Proceed to next step
+                                    self.wait_for_step = not self.wait_for_step
                         if not running:
                             break
                         if not self.wait_for_step:
@@ -629,33 +585,76 @@ class GameUI:
         self.display_runtime_info()
         pygame.display.flip()
 
+
     def display_agent_info(self, vision, action):
         import pygame
         if not self.visual or self.screen is None:
             return
         x, y = 20, 50
-        self.render_text("Agent's:", x, y, center=False)
+        
+        # Display raw vision data
+        self.render_text("Raw Vision:", x, y, center=False)
         y += 30
         for direction, cells in vision.items():
             text = f"{direction}: {''.join(cells)}"
             self.render_text(text, x, y, center=False)
             y += 30
+        
+        # Display current action
         if action:
             self.render_text(f"Action Taken: {action}", x, y, center=False)
             y += 30
-
-        # --- New Code to Display Q-values ---
-        # Retrieve Q-values for the current state
-        current_state = self.game.current_state
-        q_values = self.game.agent.q_table.get(current_state, {})
+        
+        # Display state breakdown
+        y += 20
+        self.render_text("State Breakdown:", x, y, center=False)
         y += 30
+        
+        if self.game.current_state:
+            directions = ['UP', 'DOWN', 'LEFT', 'RIGHT']
+            
+            # Display danger state
+            self.render_text("Danger:", x, y, center=False)
+            y += 25
+            for i, direction in enumerate(directions):
+                value = "True" if self.game.current_state[i] else "False"
+                self.render_text(f"  {direction}: {value}", x, y, center=False)
+                y += 20
+                
+            # Display green apple state
+            y += 10
+            self.render_text("Green Apple:", x, y, center=False)
+            y += 25
+            for i, direction in enumerate(directions):
+                value = "True" if self.game.current_state[i + 4] else "False"
+                self.render_text(f"  {direction}: {value}", x, y, center=False)
+                y += 20
+                
+            # Display red apple state
+            y += 10
+            self.render_text("Red Apple:", x, y, center=False)
+            y += 25
+            for i, direction in enumerate(directions):
+                value = "True" if self.game.current_state[i + 8] else "False"
+                self.render_text(f"  {direction}: {value}", x, y, center=False)
+                y += 20
+
+        # Display Q-values
+        y += 20
         self.render_text("Q-values:", x, y, center=False)
         y += 30
+        current_state = self.game.current_state
+        q_values = self.game.agent.q_table.get(current_state, {})
         for action_name in DIRECTIONS.keys():
             value = q_values.get(action_name, 0)
             text = f"{action_name}: {value:.2f}"
             self.render_text(text, x, y, center=False)
             y += 30
+            
+        # Display Q-table size
+        y += 20
+        q_table_size = len(self.game.agent.q_table)
+        self.render_text(f"Q-Table Entries: {q_table_size}", x, y, center=False)
 
     def display_runtime_info(self):
         import pygame
