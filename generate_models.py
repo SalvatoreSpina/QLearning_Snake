@@ -2,7 +2,7 @@ import subprocess
 import os
 
 # Define the session counts and corresponding model filenames
-session_counts = [1, 10, 100, 1000, 10000]
+session_counts = [1, 10, 100, 1000, 10000, 100000]
 model_directory = 'models'  # Ensure this directory exists or create it
 
 # Ensure the models directory exists

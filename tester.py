@@ -4,8 +4,8 @@ import argparse
 
 # Define the model directory
 model_directory = 'models'
-
-session_counts = [1, 10, 100, 1000, 10000]
+best_model = 'model_100000.txt'
+session_counts = [1, 10, 100, 1000, 10000, 100000]
 
 # Ensure the models directory exists
 if not os.path.exists(model_directory):
@@ -44,7 +44,7 @@ if args.test_type == 'test_model':
         print("--------------------")
 elif args.test_type == 'best_model':
     
-    model_file = f'model_{1000000}.txt'
+    model_file = best_model
     model_path = os.path.join(model_directory, model_file)
     command = [
         'python3', 'main.py',
@@ -59,7 +59,7 @@ elif args.test_type == 'best_model':
     subprocess.run(command)
 
 elif args.test_type == 'superbonus' or args.test_type == 'visualize_superbonus':
-    model_file = f'model_{1000000}.txt'
+    model_file = best_model
     model_path = os.path.join(model_directory, model_file)
     
     sessionss_count = 1000 if args.test_type == 'superbonus' else 10
@@ -68,7 +68,7 @@ elif args.test_type == 'superbonus' or args.test_type == 'visualize_superbonus':
     command = [
         'python3', 'main.py',
         '-sessions', str(sessionss_count),
-        '-board', '20',
+        '-board', '15',
         '-load', model_path,
         '-visual', visual,
         '-learn', 'off',

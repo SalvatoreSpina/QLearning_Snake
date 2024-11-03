@@ -1,68 +1,50 @@
 {
-  "(True, False, False, False, False, True, False, False, False, False, False, False)": {
-    "UP": 0.0,
-    "DOWN": 0.0,
-    "LEFT": 0.2,
-    "RIGHT": 0.0
-  },
-  "(False, False, False, True, False, False, False, False, False, False, False, False)": {
-    "UP": 0.398,
-    "DOWN": 0.0,
+  "(False, False, True, False, False, False, False, False, False, False, False, False)": {
+    "UP": -2.4400000000000004,
+    "DOWN": -1.0,
     "LEFT": 0.0,
     "RIGHT": 0.0
   },
   "(False, True, False, False, False, False, False, False, False, False, False, False)": {
-    "UP": 0.4427678,
+    "UP": -1.0,
     "DOWN": 0.0,
-    "LEFT": 0.238,
-    "RIGHT": 0.63968462318
+    "LEFT": -1.0,
+    "RIGHT": -2.4400000000000004
   },
-  "(False, False, True, False, False, True, False, False, False, False, False, False)": {
-    "UP": 0.2,
-    "DOWN": 0.0,
-    "LEFT": 0.0,
-    "RIGHT": 0.238
-  },
-  "(False, True, False, False, False, False, False, True, False, False, False, False)": {
-    "UP": 0.0,
-    "DOWN": 0.0,
-    "LEFT": 0.0,
-    "RIGHT": 20.0
-  },
-  "(False, False, True, False, False, True, False, True, False, False, False, False)": {
-    "UP": 0.2,
-    "DOWN": 0.0,
-    "LEFT": 0.0,
+  "(False, False, False, True, False, False, False, False, False, False, False, False)": {
+    "UP": -1.0,
+    "DOWN": -2.4400000000000004,
+    "LEFT": -1.8,
     "RIGHT": 0.0
-  },
-  "(False, False, True, False, False, False, False, False, False, False, False, False)": {
-    "UP": 0.2769918,
-    "DOWN": 0.238,
-    "LEFT": 0.0,
-    "RIGHT": 0.40522
   },
   "(True, False, False, False, False, False, False, False, False, False, False, False)": {
     "UP": 0.0,
-    "DOWN": 0.0,
-    "LEFT": 0.0,
-    "RIGHT": 0.2
+    "DOWN": -1.8,
+    "LEFT": -3.68928,
+    "RIGHT": 0.0
   },
-  "(False, False, True, False, False, False, False, False, False, True, False, False)": {
+  "(False, False, False, True, False, False, False, False, False, False, True, False)": {
     "UP": 0.0,
-    "DOWN": 0.0,
-    "LEFT": 0.0,
-    "RIGHT": 0.2
-  },
-  "(False, False, True, True, False, False, False, False, False, False, False, False)": {
-    "UP": 0.2,
-    "DOWN": 0.0,
+    "DOWN": -1.0,
     "LEFT": 0.0,
     "RIGHT": 0.0
   },
-  "(True, True, False, True, False, False, False, False, False, False, False, False)": {
+  "(False, False, False, True, False, False, False, False, True, False, False, False)": {
     "UP": 0.0,
-    "DOWN": 0.0,
+    "DOWN": -1.0,
     "LEFT": 0.0,
-    "RIGHT": -40.0
+    "RIGHT": 0.0
+  },
+  "(False, False, True, True, False, False, False, False, False, False, False, False)": {
+    "UP": 0.0,
+    "DOWN": -1.0,
+    "LEFT": 0.0,
+    "RIGHT": 0.0
+  },
+  "(True, True, True, False, False, False, False, True, False, False, False, False)": {
+    "UP": 0.0,
+    "DOWN": -40.0,
+    "LEFT": 0.0,
+    "RIGHT": 0.0
   }
 }

@@ -223,7 +223,7 @@ class Game:
         if red_apple_state[action_index]:
             return -20  # Penalty for moving towards red apple
 
-        return 1  # Survival reward
+        return -5  # Survival reward
 
     def get_obstacle_distances(self):
         head_x, head_y = self.board.snake.body[0]
@@ -541,9 +541,8 @@ class GameUI:
         if self.visual:
             pygame.quit()
 
-        if not self.visual:
-            # Print stats to terminal
-            print(f"Training completed. Max length: {self.max_length}, Max duration: {self.max_duration}")
+
+        print(f"Training completed. Max length: {self.max_length}, Max duration: {self.max_duration}")
 
     def draw_game(self):
         """Draw the game elements on the screen."""
