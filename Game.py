@@ -131,14 +131,17 @@ class Board:
         for direction_name, (dx, dy) in DIRECTIONS.items():
             cells_in_direction = []
             x, y = head_x + dx, head_y + dy
-            while 0 <= x < self.size and 0 <= y < self.size:
-                cell = self.grid[x][y]
-                cells_in_direction.append(cell.value)
-                if cell == CellType.WALL:
-                    break
-            else:
-                cells_in_direction.append(CellType.WALL.value)  # Edge of the board
-            vision[direction_name] = cells_in_direction
+        while 0 <= x < self.size and 0 <= y < self.size:
+            cell = self.grid[x][y]
+            cells_in_direction.append(cell.value)
+            if cell == CellType.WALL or cell == CellType.SNAKE:
+                break
+            # Update x and y here based on the direction
+            x += dx
+            y += dy
+        else:
+            cells_in_direction.append(CellType.WALL.value)  # Edge of the board
+        vision[direction_name] = cells_in_direction
         return vision
 
 class Game:
@@ -323,8 +326,6 @@ class ConfigScreen:
         self.options = {
             "Board Size": str(defaults.get('board_size', BOARD_SIZE)),
             "Sessions": str(defaults.get('sessions', 1)),
-            "Save File": defaults.get('save_file', ''),
-            "Load File": defaults.get('load_file', ''),
             "Visual": 'on' if defaults.get('visual', True) else 'off',
             "Learn": 'on' if defaults.get('learn', True) else 'off',
             "Speed": defaults.get('speed', 'Normal'),
@@ -430,8 +431,6 @@ class ConfigScreen:
         # Update UI settings based on options
         self.ui.board_size = int(self.options["Board Size"])
         self.ui.sessions = int(self.options["Sessions"])
-        self.ui.save_file = self.options["Save File"]
-        self.ui.load_file = self.options["Load File"]
         self.ui.visual = self.options["Visual"] == "on"
         self.ui.learn = self.options["Learn"] == "on"
         self.ui.speed = self.options["Speed"]
@@ -523,12 +522,13 @@ class GameUI:
             elif self.state == "training":
                 self.max_length = 0
                 self.max_duration = 0
+                self.wait_for_step = True  # Initialize wait state
                 for session in range(1, self.sessions + 1):
                     self.current_session = session
                     self.game = Game(self.board_size, self.agent, print_terminal=self.print_terminal)
                     self.game.start()
                     steps = 0
-                    self.wait_for_step = self.step_by_step  # Initialize wait state
+                    self.wait_for_step = self.step_by_step
                     while not self.game.is_game_over and running:
                         # Handle events
                         for event in pygame.event.get():
@@ -537,7 +537,7 @@ class GameUI:
                                 break
                             elif event.type == pygame.KEYDOWN:
                                 if event.key == pygame.K_SPACE:
-                                    if self.step_by_step:
+                                    if self.wait_for_step:
                                         self.wait_for_step = False  # Proceed to next step
                         if not running:
                             break
@@ -546,9 +546,11 @@ class GameUI:
                             steps += 1
                             if self.step_by_step:
                                 self.wait_for_step = True  # Wait for the next spacebar press
+
                         if self.visual:
                             self.draw_game()
                             pygame.display.flip()
+
                         if self.visual:
                             if self.speed == "Really Slow":
                                 self.clock.tick(5)
