@@ -31,7 +31,7 @@ if args.test_type == 'test_model':
         # Construct the command
         command = [
             'python3', 'main.py',
-            '-sessions', '10',
+            '-sessions', '100',
             '-load', model_path,
             '-visual', 'off',
             '-learn', 'off',
@@ -42,5 +42,42 @@ if args.test_type == 'test_model':
         print(f"Executing: {' '.join(command)}")
         subprocess.run(command)
         print("--------------------")
+elif args.test_type == 'best_model':
+    
+    model_file = f'model_{1000000}.txt'
+    model_path = os.path.join(model_directory, model_file)
+    command = [
+        'python3', 'main.py',
+        '-sessions', '5',
+        '-load', model_path,
+        '-visual', 'on',
+        '-learn', 'off',
+        '-print', 'off'
+    ]
+    
+    print(f"Executing: {' '.join(command)}")
+    subprocess.run(command)
+
+elif args.test_type == 'superbonus' or args.test_type == 'visualize_superbonus':
+    model_file = f'model_{10000}.txt'
+    model_path = os.path.join(model_directory, model_file)
+    
+    command = [
+        'python3', 'main.py',
+        '-sessions', '1000',
+        '-board', '100',
+        '-load', model_path,
+        '-visual', 'off',
+        '-learn', 'on',
+        '-print', 'off'
+    ]
+    
+    if args.test_type == 'visualize_superbonus':
+        command['-sessions'] = '10'
+        command['-visual'] = 'on'
+    
+    print(f"Executing: {' '.join(command)}")
+    subprocess.run(command)
+    
 else:
     print(f"Unknown test type: {args.test_type}")

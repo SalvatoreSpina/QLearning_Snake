@@ -175,6 +175,8 @@ class Game:
             valid_actions = [action for action in DIRECTIONS.keys() if action != opposite_dir_name]
             # Agent makes a decision based on state
             action = self.agent.choose_action(state, valid_actions)
+            self.previous_state = state
+            self.previous_action = action
             direction = DIRECTIONS[action]
 
             try:
@@ -189,15 +191,13 @@ class Game:
                 # Learn from the experience
                 if self.previous_state is not None and self.previous_action is not None:
                     self.agent.learn(self.previous_state, self.previous_action, reward, state)
-                # Update previous state and action
-                self.previous_state = state
-                self.previous_action = action
 
                 # Display state and action
                 if self.print_terminal:
                     self.display_state_and_action(state, action)
             except IndexError:
                 self.is_game_over = True
+                # print("Game Over: Snake moved out of bounds!")
                 reward = -200  # Penalty for moving out of bounds
                 # Learn from the final move
                 if self.previous_state is not None and self.previous_action is not None:
@@ -212,10 +212,10 @@ class Game:
         red_apple_state = current_state[8:]
 
         if self.is_game_over:
-            return -100  # Major penalty for dying
+            return -1000  # Major penalty for dying
 
         if danger_state[action_index]:
-            return -50  # Penalty for moving towards danger
+            return -1000  # Penalty for moving towards danger
 
         if green_apple_state[action_index]:
             return 100  # Big reward for moving towards green apple
@@ -223,8 +223,7 @@ class Game:
         if red_apple_state[action_index]:
             return -20  # Penalty for moving towards red apple
 
-        return -1  # Small penalty for each move to encourage efficiency
-
+        return 1  # Survival reward
 
     def get_obstacle_distances(self):
         head_x, head_y = self.board.snake.body[0]
@@ -267,8 +266,10 @@ class Game:
     def check_game_over(self):
         if self.board.snake.collides_with_self():
             self.is_game_over = True
+            # print("Game Over: Snake collided with itself!")
         elif self.board.snake.length == 0:
             self.is_game_over = True
+            # print("Game Over: Snake has no body!")
 
     def display_state_and_action(self, state, action):
         print(f"State: {state}")

@@ -28,35 +28,34 @@ class Agent:
                     if j == 0 and (tile == 'W' or tile == 'S'):
                         danger_state[i] = True
                         break
-                    elif j == 1 and (tile == 'W' or tile == 'S'):
-                        danger_state[i] = True
-                        break
-                    elif j < 2 and tile == 'R':
+                    elif j == 0 and tile == 'R':
                         red_apple_state[i] = True
                         break
                     elif tile == 'G':
                         green_apple_state[i] = True
                         break
 
+        # print("Danger state:", danger_state)
+        # print("Green apple state:", green_apple_state)
+        # print("Red apple state:", red_apple_state)
         # Final state is a tuple of the three lists concatenated
         state = tuple(danger_state + green_apple_state + red_apple_state)
-        # print("State:", state)
         return state
 
     def choose_action(self, state, valid_actions):
         # Even with learning off, keep a small exploration rate
-        exploration_chance = self.epsilon if self.learning else 0.05
+        exploration_chance = self.epsilon if self.learning else 0.001
         
         if np.random.rand() < exploration_chance:
             return random.choice(valid_actions)
         
         q_values = self.q_table.get(state, {})
         if not q_values:
-            # For unseen states, initialize with small random values
-            # This helps prevent getting stuck in new situations
-            q_values = {action: np.random.uniform(0.1, 0.2) for action in DIRECTIONS.keys()}
+            # if not self.learning:
+            #     print("Agent is not learning and has not seen this state before.")
+            q_values = {action: -100.0 for action in DIRECTIONS.keys()}  # Strong bias against unknowns
             self.q_table[state] = q_values
-        
+
         # Filter to valid actions
         valid_q_values = {action: q_values[action] for action in valid_actions}
         
@@ -68,6 +67,7 @@ class Agent:
         
         # Get best action based on noisy Q-values
         max_q = max(noisy_q_values.values())
+        # print("Noisy Q-values:", noisy_q_values)
         best_actions = [a for a in valid_actions if noisy_q_values[a] == max_q]
         
         return random.choice(best_actions)

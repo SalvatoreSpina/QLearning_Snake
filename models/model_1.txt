@@ -1,20 +1,14 @@
 {
-  "(False, False, True, False, False, False, False, False, False, False, False, False)": {
-    "UP": 0.0,
-    "DOWN": 0.0,
-    "LEFT": 0.0,
-    "RIGHT": -0.2
-  },
-  "(False, False, True, True, False, False, False, False, False, False, False, False)": {
-    "UP": 0.0,
-    "DOWN": -40.0,
-    "LEFT": 0.0,
-    "RIGHT": 0.0
-  },
   "(True, False, False, True, False, False, True, False, False, False, False, False)": {
     "UP": 0.0,
-    "DOWN": 0.0,
+    "DOWN": 0.2,
     "LEFT": 0.0,
     "RIGHT": 0.0
+  },
+  "(True, False, False, True, False, False, False, False, False, False, False, False)": {
+    "UP": 0.0,
+    "DOWN": 0.0,
+    "LEFT": 0.0,
+    "RIGHT": -40.0
   }
 }
