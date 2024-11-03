@@ -555,7 +555,7 @@ class GameUI:
             (self.WINDOW_HEIGHT - 100) // self.game.board_size,
             (self.WINDOW_WIDTH - PANEL_WIDTH - 100) // self.game.board_size
         )
-        board_origin = (PANEL_WIDTH + 50, 50)
+        board_origin = (PANEL_WIDTH + 50, 20)
         # Draw the game board
         for x in range(self.game.board.size):
             for y in range(self.game.board.size):
