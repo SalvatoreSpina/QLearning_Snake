@@ -16,10 +16,10 @@ for sessions in session_counts:
     # Construct the command
     command = [
         'python3', 'main.py',
-        '-sessions', 10,
+        '-sessions', str(sessions),
         '-save', model_filename,
         '-visual', 'off',
-        '-learn', 'off',
+        '-learn', 'on',
         '-print', 'off',
     ]
     # Run the command

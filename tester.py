@@ -5,7 +5,7 @@ import argparse
 # Define the model directory
 model_directory = 'models'
 
-session_counts = [1, 10, 100, 1000]
+session_counts = [1, 10, 100, 1000, 10000]
 
 # Ensure the models directory exists
 if not os.path.exists(model_directory):
@@ -31,7 +31,7 @@ if args.test_type == 'test_model':
         # Construct the command
         command = [
             'python3', 'main.py',
-            '-sessions', str(session_count),
+            '-sessions', '10',
             '-learn', 'off',
             '-visual', 'off',
             '-print', 'off',
