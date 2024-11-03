@@ -134,10 +134,8 @@ class Board:
             while 0 <= x < self.size and 0 <= y < self.size:
                 cell = self.grid[x][y]
                 cells_in_direction.append(cell.value)
-                if cell in {CellType.SNAKE, CellType.WALL}:
-                    break  # Stop vision when an obstacle is encountered
-                x += dx
-                y += dy
+                if cell == CellType.WALL:
+                    break
             else:
                 cells_in_direction.append(CellType.WALL.value)  # Edge of the board
             vision[direction_name] = cells_in_direction
@@ -260,27 +258,12 @@ class Game:
             return -100  # Major penalty for dying
         
         if self.apple_eaten == "green":
-            return 50   # Big reward for eating green apple
+            return 100   # Big reward for eating green apple
         
         if self.apple_eaten == "red":
             return -50  # Penalty for eating red apple
         
-        # Extract green apple distances from state (every third element starting from index 1)
-        prev_green_distances = [prev_state[i] for i in range(1, len(prev_state), 3)] if prev_state else None
-        current_green_distances = [current_state[i] for i in range(1, len(current_state), 3)]
-        
-        # If there was a visible green apple and we moved closer to it
-        if prev_green_distances:
-            prev_min_dist = min([d for d in prev_green_distances if d > 0], default=0)
-            current_min_dist = min([d for d in current_green_distances if d > 0], default=0)
-            
-            if prev_min_dist > 0 and current_min_dist > 0:
-                if current_min_dist < prev_min_dist:
-                    return 10  # Reward for moving closer to green apple
-                elif current_min_dist > prev_min_dist:
-                    return -5  # Small penalty for moving away from visible green apple
-        
-        return -1  # Small penalty for each move to encourage efficiency
+        return 0  # Small penalty for each move to encourage efficiency
 
 
     def get_obstacle_distances(self):
@@ -411,7 +394,7 @@ class ConfigScreen:
                         if key in ["Visual", "Learn", "Print Terminal", "Step-by-Step"]:
                             self.options[key] = "off" if self.options[key] == "on" else "on"
                         elif key == "Speed":
-                            speeds = ["Slow", "Normal", "Fast"]
+                            speeds = ["Really Slow", "Slow", "Normal", "Fast"]
                             current_index = speeds.index(self.options[key])
                             self.options[key] = speeds[(current_index + 1) % len(speeds)]
                         else:
@@ -567,7 +550,9 @@ class GameUI:
                             self.draw_game()
                             pygame.display.flip()
                         if self.visual:
-                            if self.speed == "Slow":
+                            if self.speed == "Really Slow":
+                                self.clock.tick(5)
+                            elif self.speed == "Slow":
                                 self.clock.tick(10)
                             elif self.speed == "Normal":
                                 self.clock.tick(20)
@@ -647,7 +632,7 @@ class GameUI:
         if not self.visual or self.screen is None:
             return
         x, y = 20, 50
-        self.render_text("Agent's Decisions:", x, y, center=False)
+        self.render_text("Agent's:", x, y, center=False)
         y += 30
         for direction, cells in vision.items():
             text = f"{direction}: {''.join(cells)}"
@@ -661,6 +646,7 @@ class GameUI:
         # Retrieve Q-values for the current state
         current_state = self.game.current_state
         q_values = self.game.agent.q_table.get(current_state, {})
+        y += 30
         self.render_text("Q-values:", x, y, center=False)
         y += 30
         for action_name in DIRECTIONS.keys():
