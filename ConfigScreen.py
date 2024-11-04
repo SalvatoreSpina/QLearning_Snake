@@ -1,4 +1,3 @@
-import os
 import pygame
 
 from config import (BOARD_SIZE, BACKGROUND_COLOR, BUTTON_COLOR,
@@ -42,7 +41,7 @@ class ConfigScreen:
         screen_width = self.ui.WINDOW_WIDTH
         y_offset = 70
         _value = len(self.option_keys) * y_offset + self.save_button_rect.height
-        y = (self.ui.WINDOW_HEIGHT - _value) // 2  # Start vertically centered
+        y = (self.ui.WINDOW_HEIGHT - _value) // 2
 
         for i, key in enumerate(self.option_keys):
             color = BUTTON_COLOR
