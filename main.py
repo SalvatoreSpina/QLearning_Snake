@@ -1,20 +1,46 @@
-# main.py
-
-from Game import GameUI
 import argparse
+
 from config import BOARD_SIZE
+from GameUI import GameUI
+
 
 def main():
+    """Main function to run the game."""
     parser = argparse.ArgumentParser(description='Snake Q-Learning Agent')
-    parser.add_argument('-sessions', type=int, default=1, help='Number of training sessions')
-    parser.add_argument('-save', type=str, default='', help='File to save the model')
-    parser.add_argument('-load', type=str, default='', help='File to load the model')
-    parser.add_argument('-visual', type=str, choices=['on', 'off'], default='on', help='Turn visualization on or off')
-    parser.add_argument('-learn', type=str, choices=['on', 'off'], default='on', help='Enable or disable learning')
-    parser.add_argument('-board_size', type=int, default=BOARD_SIZE, help='Size of the game board')
-    parser.add_argument('-speed', type=str, choices=['Slow', 'Normal', 'Fast'], default='Normal', help='Game speed')
-    parser.add_argument('-print', type=str, choices=['on', 'off'], default='on', help='Enable or disable terminal printing')
-    parser.add_argument('-step_by_step', type=str, choices=['on', 'off'], default='off', help='Enable or disable step-by-step execution')
+    parser.add_argument(
+        '-sessions', type=int, default=1, help='Number of training sessions'
+    )
+    parser.add_argument(
+        '-save', type=str, default='', help='File to save the model'
+    )
+    parser.add_argument(
+        '-load', type=str, default='', help='File to load the model'
+    )
+    parser.add_argument(
+        '-visual', type=str, choices=['on', 'off'], default='on',
+        help='Turn visualization on or off'
+    )
+    parser.add_argument(
+        '-learn', type=str, choices=['on', 'off'], default='on',
+        help='Enable or disable learning'
+    )
+    parser.add_argument(
+        '-board_size', type=int, default=BOARD_SIZE,
+        help='Size of the game board'
+    )
+    parser.add_argument(
+        '-speed', type=str, choices=['Slow', 'Normal', 'Fast'],
+        default='Normal',
+        help='Game speed'
+    )
+    parser.add_argument(
+        '-print', type=str, choices=['on', 'off'], default='on',
+        help='Enable or disable terminal printing'
+    )
+    parser.add_argument(
+        '-step_by_step', type=str, choices=['on', 'off'], default='off',
+        help='Enable or disable step-by-step execution'
+    )
 
     args = parser.parse_args()
 
@@ -33,7 +59,10 @@ def main():
     stats = ui.run()
     return stats
 
+
 if __name__ == "__main__":
+    """Run the main"""
     stats = main()
     if stats:
-        print(f"Max Length: {stats['max_length']}, Max Duration: {stats['max_duration']}")
+        print(f"Max Length: {stats['max_length']}", end=' ')
+        print(f"Max Duration: {stats['max_duration']}")
