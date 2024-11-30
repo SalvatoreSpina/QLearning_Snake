@@ -11,7 +11,17 @@ WINDOW_HEIGHT = pygame.display.Info().current_h
 class ConfigScreen:
     def __init__(self, ui, defaults):
         self.ui = ui
+        # Main font for options
         self.font = pygame.font.Font(None, 40)
+
+        # Load and scale background image
+        self.background_image = pygame.image.load("assets/background.png")
+        self.background_image = pygame.transform.scale(
+            self.background_image, (self.ui.WINDOW_WIDTH, self.ui.WINDOW_HEIGHT)
+        )
+
+        self.title_image = pygame.image.load("assets/title.png")
+
         self.options = {
             "Board Size": str(defaults.get('board_size', BOARD_SIZE)),
             "Sessions": str(defaults.get('sessions', 1)),
@@ -23,6 +33,7 @@ class ConfigScreen:
             "Step-by-Step": (
                 'on' if defaults.get('step_by_step', False) else 'off')
         }
+
         self.selected_option = 0
         self.option_keys = list(self.options.keys())
         self.active_input = False
@@ -32,16 +43,25 @@ class ConfigScreen:
 
     def display(self):
         if self.ui.visual:
-            self.ui.screen.fill(BACKGROUND_COLOR)
+            # Draw the background image
+            self.ui.screen.blit(self.background_image, (0, 0))
+
+            self._render_title()
             self._render_options()
             self._render_save_button()
             pygame.display.flip()
 
+    def _render_title(self):
+        # Position the title image at the top center
+        title_rect = self.title_image.get_rect(center=(self.ui.WINDOW_WIDTH // 2, 150))
+        self.ui.screen.blit(self.title_image, title_rect)
+
     def _render_options(self):
         screen_width = self.ui.WINDOW_WIDTH
         y_offset = 70
-        _value = len(self.option_keys) * y_offset + self.save_button_rect.height
-        y = (self.ui.WINDOW_HEIGHT - _value) // 2
+        # Adjust vertical positioning to leave space for the title
+        _v = len(self.option_keys) * y_offset + self.save_button_rect.height
+        y = ((self.ui.WINDOW_HEIGHT - _v) // 2) + 20
 
         for i, key in enumerate(self.option_keys):
             color = BUTTON_COLOR
@@ -50,6 +70,7 @@ class ConfigScreen:
             rect = pygame.Rect(0, 0, 400, 50)
             rect.centerx = screen_width // 2  # Center horizontally
             rect.y = y
+
             pygame.draw.rect(self.ui.screen, color, rect, border_radius=10)
             option_text = f"{key}: {self.options[key]}"
             if self.active_input and i == self.selected_option:
@@ -147,7 +168,6 @@ class ConfigScreen:
         self.ui.print_terminal = self.options["Print Terminal"] == "on"
         self.ui.step_by_step = self.options["Step-by-Step"] == "on"
         if self.ui.visual:
-            self.ui.screen = pygame.display.set_mode((WINDOW_WIDTH,
-                                                      WINDOW_HEIGHT))
+            self.ui.screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
         else:
             self.ui.screen = None

@@ -31,14 +31,3 @@ DIRECTIONS = {
     "LEFT": (0, -1),
     "RIGHT": (0, 1),
 }
-
-# Mapping from direction vectors to names
-DIRECTION_VECTORS_TO_NAMES = {v: k for k, v in DIRECTIONS.items()}
-
-# Opposite directions mapping
-OPPOSITE_DIRECTIONS = {
-    "UP": "DOWN",
-    "DOWN": "UP",
-    "LEFT": "RIGHT",
-    "RIGHT": "LEFT"
-}

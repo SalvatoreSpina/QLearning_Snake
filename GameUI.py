@@ -65,6 +65,11 @@ class GameUI:
                                                self.WINDOW_HEIGHT))
         self.clock = pygame.time.Clock()
         self.font = pygame.font.Font(None, 30)
+        # Load and scale the background image
+        self.background_image = pygame.image.load("assets/background.png")
+        self.background_image = pygame.transform.scale(
+            self.background_image, (self.WINDOW_WIDTH, self.WINDOW_HEIGHT)
+        )
 
     def render_text(self, text, x, y, center=True):
         """Render text on the screen."""
@@ -92,8 +97,8 @@ class GameUI:
         if self.visual:
             pygame.quit()
 
-        print(f"Training completed. Max length: {self.max_length},\
-            Max duration: {self.max_duration}")
+        print(f"Training completed. Max length: {self.max_length}, \
+Max duration: {self.max_duration}")
 
     def _handle_config_state(self, running):
         for event in pygame.event.get():
@@ -140,11 +145,11 @@ class GameUI:
                 break
             self._update_statistics(steps)
             if self.print_terminal:
-                print(f"Session {session}/{self.sessions} completed.\
-                    Length: {self.game.board.snake.length}, Steps: {steps}")
+                print(f"Session {session}/{self.sessions} completed. \
+Length: {self.game.board.snake.length}, Steps: {steps}")
         if self.print_terminal:
             print(f"Training completed. Max length: {self.max_length}, \
-                Max duration: {self.max_duration}")
+Max duration: {self.max_duration}")
         if self.save_file:
             self.agent.save_model(self.save_file)
         # After training, return to config or exit
@@ -182,7 +187,9 @@ class GameUI:
         """Draw the game elements on the screen."""
         if not self.visual or self.screen is None:
             return
-        self.screen.fill(BACKGROUND_COLOR)
+        # Draw the background image
+        self.screen.blit(self.background_image, (0, 0))
+        
         cell_size = min(
             (self.WINDOW_HEIGHT - 100) // self.game.board_size,
             (self.WINDOW_WIDTH - PANEL_WIDTH - 100) // self.game.board_size
@@ -211,7 +218,7 @@ class GameUI:
 
     def _get_cell_color(self, cell):
         if cell == CellType.EMPTY:
-            return BACKGROUND_COLOR
+            return BACKGROUND_COLOR  # The cell outlines show over the background image
         elif cell == CellType.SNAKE:
             return SNAKE_COLOR
         elif cell == CellType.HEAD:
@@ -233,7 +240,7 @@ class GameUI:
         # Display raw vision data
         y = self._render_section_title("Raw Vision:", x, y)
         for direction, cells in vision.items():
-            text = f"{direction}: {''.join(cells)}"
+            text = f" {direction}: {''.join(cells)}"
             self.render_text(text, x, y, center=False)
             y += 30
 
@@ -292,7 +299,7 @@ class GameUI:
         q_values = self.game.agent.q_table.get(current_state, {})
         for action_name in DIRECTIONS.keys():
             value = q_values.get(action_name, 0)
-            text = f"{action_name}: {value:.2f}"
+            text = f" {action_name}: {value:.2f}"
             self.render_text(text, x, y, center=False)
             y += 30
         return y
@@ -300,7 +307,7 @@ class GameUI:
     def _display_runtime_info(self):
         if not self.visual or self.screen is None:
             return
-        x, y = self.WINDOW_WIDTH - PANEL_WIDTH + 20, 50
+        x, y = self.WINDOW_WIDTH - PANEL_WIDTH - 150, 50
         self.render_text("Runtime Information:", x, y, center=False)
         y += 30
         if self.save_file:
@@ -309,16 +316,16 @@ class GameUI:
             model_name = os.path.basename(self.load_file)
         else:
             model_name = "None"
-        self.render_text(f"Model Name: {model_name}", x, y, center=False)
+        self.render_text(f" Model Name: {model_name}", x, y, center=False)
         y += 30
         # Display current session
-        self.render_text(f"Session: {self.current_session}/{self.sessions}",
+        self.render_text(f" Session: {self.current_session}/{self.sessions}",
                          x, y, center=False)
         y += 30
         # Display max length
-        self.render_text(f"Max Length: {self.max_length}", x, y, center=False)
+        self.render_text(f" Max Length: {self.max_length}", x, y, center=False)
         y += 30
         # Display max duration
-        self.render_text(f"Max Duration: {self.max_duration}",
+        self.render_text(f" Max Duration: {self.max_duration}",
                          x, y, center=False)
         y += 30

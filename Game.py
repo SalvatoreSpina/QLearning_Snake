@@ -1,5 +1,5 @@
 from Board import Board
-from config import DIRECTIONS, DIRECTION_VECTORS_TO_NAMES, OPPOSITE_DIRECTIONS
+from config import DIRECTIONS
 
 
 class Game:
@@ -46,10 +46,7 @@ class Game:
         self.current_state = self.agent.get_state(state)
 
     def _get_valid_actions(self):
-        current_dir = self.board.snake.direction
-        current_dir_name = DIRECTION_VECTORS_TO_NAMES[current_dir]
-        opposite_dir = OPPOSITE_DIRECTIONS[current_dir_name]
-        return [action for action in DIRECTIONS if action != opposite_dir]
+        return [action for action in DIRECTIONS]
 
     def _move_snake(self, action):
         direction = DIRECTIONS[action]
@@ -62,7 +59,7 @@ class Game:
 
     def _handle_out_of_bounds(self):
         self.is_game_over = True
-        reward = -200
+        reward = -10
         self._learn_from_experience(reward)
 
     def get_reward(self, current_state, action):
@@ -73,14 +70,14 @@ class Game:
         red_apple_state = current_state[8:]
 
         if self.is_game_over:
-            return -1000
+            return -10
         if danger_state[action_index]:
-            return -1000
+            return -10
         if green_apple_state[action_index]:
-            return 100
+            return 5
         if red_apple_state[action_index]:
-            return -20
-        return -5
+            return -4
+        return -1
 
     def _handle_collisions(self):
         head = self.board.snake.body[0]

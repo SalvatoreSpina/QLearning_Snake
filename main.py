@@ -29,8 +29,8 @@ def main():
         help='Size of the game board'
     )
     parser.add_argument(
-        '-speed', type=str, choices=['Slow', 'Normal', 'Fast'],
-        default='Normal',
+        '-speed', type=str, choices=['Really Slow', 'Slow', 'Normal', 'Fast'],
+        default='Slow',
         help='Game speed'
     )
     parser.add_argument(

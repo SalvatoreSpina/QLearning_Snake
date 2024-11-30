@@ -1,824 +1,878 @@
 {
   "(False, False, True, False, False, False, False, False, False, False, False, False)": {
-    "UP": -4.999999999999998,
-    "DOWN": -4.999999999999998,
-    "LEFT": 0.0,
-    "RIGHT": -4.999999999999998
+    "UP": -19.999999999999808,
+    "DOWN": -19.999999999999808,
+    "LEFT": -28.999999999999808,
+    "RIGHT": -19.999999999999808
   },
   "(False, True, False, False, False, False, False, False, False, False, False, False)": {
-    "UP": -4.999999999999998,
-    "DOWN": 0.0,
-    "LEFT": -4.999999999999998,
-    "RIGHT": -4.999999999999998
+    "UP": -19.999999999999808,
+    "DOWN": -28.999999999999808,
+    "LEFT": -19.999999999999808,
+    "RIGHT": -19.999999999999808
   },
   "(False, False, True, True, False, False, False, False, False, False, False, False)": {
-    "UP": -99.9999999999992,
-    "DOWN": -99.9999999999992,
-    "LEFT": -295.1981864852519,
-    "RIGHT": -296.47614372838916
+    "UP": -19.999999999999808,
+    "DOWN": -19.999999999999808,
+    "LEFT": -28.9999999999965,
+    "RIGHT": -28.999999999998117
   },
   "(False, True, False, True, False, False, True, False, False, False, False, False)": {
-    "UP": 1894.9999999999854,
-    "DOWN": 1326.7772596124555,
-    "LEFT": 1999.999999999987,
-    "RIGHT": 1651.8232120156122
-  },
-  "(False, True, False, True, False, False, False, False, False, False, False, False)": {
-    "UP": -99.9999999999992,
-    "DOWN": -743.6189959719673,
-    "LEFT": -99.9999999999992,
-    "RIGHT": -423.45872847033536
-  },
-  "(True, False, False, False, False, False, False, False, False, False, False, False)": {
-    "UP": 0.0,
-    "DOWN": -4.999999999999998,
-    "LEFT": -4.999999999999998,
-    "RIGHT": -4.999999999999998
-  },
-  "(False, False, False, True, False, False, False, False, False, False, False, False)": {
-    "UP": -4.999999999999998,
-    "DOWN": -4.999999999999998,
-    "LEFT": -4.999999999999998,
-    "RIGHT": 0.0
+    "UP": 93.99993400881499,
+    "DOWN": 84.99983207773593,
+    "LEFT": 99.9999999999992,
+    "RIGHT": 84.99676863349487
   },
   "(False, False, False, True, False, True, False, False, False, False, False, False)": {
-    "UP": 1894.9999921987217,
-    "DOWN": 1999.999999999987,
-    "LEFT": 1894.9999991713685,
-    "RIGHT": 0.0
+    "UP": 93.98307414497525,
+    "DOWN": 99.9999999999992,
+    "LEFT": 93.99614112840861,
+    "RIGHT": 84.98610555580939
   },
-  "(True, False, True, False, False, False, False, False, False, False, False, False)": {
-    "UP": -664.684780894506,
-    "DOWN": -99.9999999999992,
-    "LEFT": -531.0871832585173,
-    "RIGHT": -99.9999999999992
-  },
-  "(True, False, True, False, False, False, False, True, False, False, False, False)": {
-    "UP": 1365.3287905371249,
-    "DOWN": 1894.9999999999827,
-    "LEFT": 1466.699043817248,
-    "RIGHT": 1999.999999999987
-  },
-  "(False, False, True, False, False, False, False, True, False, False, False, False)": {
-    "UP": 1894.999999999987,
-    "DOWN": 1894.999999999987,
-    "LEFT": 0.0,
-    "RIGHT": 1999.999999999987
-  },
-  "(False, False, True, False, False, True, False, False, False, False, False, False)": {
-    "UP": 1894.999996799698,
-    "DOWN": 1999.999999999987,
-    "LEFT": 0.0,
-    "RIGHT": 1894.999997863399
-  },
-  "(True, False, False, False, False, True, False, False, False, False, False, False)": {
-    "UP": 0.0,
-    "DOWN": 1999.999999999987,
-    "LEFT": 1894.999999999987,
-    "RIGHT": 1894.999999999987
+  "(False, False, False, True, False, False, False, False, False, False, False, False)": {
+    "UP": -19.999999999999808,
+    "DOWN": -19.999999999999808,
+    "LEFT": -19.999999999999808,
+    "RIGHT": -28.999999999999808
   },
   "(True, True, False, False, False, False, False, False, False, False, False, False)": {
-    "UP": -295.0074670111473,
-    "DOWN": -337.5311125891679,
-    "LEFT": -99.9999999999992,
-    "RIGHT": -99.9999999999992
-  },
-  "(False, True, True, False, False, False, False, False, False, False, False, False)": {
-    "UP": -99.9999999999992,
-    "DOWN": -676.1464935945003,
-    "LEFT": -682.3219528356589,
-    "RIGHT": -99.9999999999992
-  },
-  "(False, False, True, True, True, False, False, False, False, False, False, False)": {
-    "UP": 1999.9999999996764,
-    "DOWN": 1894.9529368662431,
-    "LEFT": 1685.1767669635533,
-    "RIGHT": 1694.513242403225
-  },
-  "(True, True, True, False, False, False, False, False, False, False, False, False)": {
-    "UP": -899.174935716695,
-    "DOWN": -818.4404130054157,
-    "LEFT": -1011.920793318996,
-    "RIGHT": -99.9999999999992
-  },
-  "(False, False, False, True, True, False, False, False, False, False, False, False)": {
-    "UP": 1999.999999999987,
-    "DOWN": 1894.9999999557551,
-    "LEFT": 1894.9999988573168,
-    "RIGHT": 0.0
-  },
-  "(False, True, False, False, True, False, False, False, False, False, False, False)": {
-    "UP": 1999.999999999987,
-    "DOWN": 0.0,
-    "LEFT": 1894.999999999987,
-    "RIGHT": 1894.999999999987
-  },
-  "(True, False, False, True, False, False, False, False, False, False, False, False)": {
-    "UP": -717.2528654199593,
-    "DOWN": -99.9999999999992,
-    "LEFT": -99.9999999999992,
-    "RIGHT": -806.737269484935
-  },
-  "(True, False, False, False, False, False, True, False, False, False, False, False)": {
-    "UP": 0.0,
-    "DOWN": 1894.9999999474373,
-    "LEFT": 1999.999999999987,
-    "RIGHT": 1894.999997888048
-  },
-  "(False, True, False, True, True, False, False, False, False, False, False, False)": {
-    "UP": 1999.999999999987,
-    "DOWN": 1644.2164610791913,
-    "LEFT": 1894.9999999999866,
-    "RIGHT": 1313.2999460539877
-  },
-  "(False, False, False, True, False, False, False, False, False, False, True, False)": {
-    "UP": -4.999999999999998,
-    "DOWN": -4.999999999999998,
-    "LEFT": -19.769415699078632,
-    "RIGHT": 0.0
-  },
-  "(False, True, False, False, False, False, False, True, False, False, False, False)": {
-    "UP": 1894.99999975487,
-    "DOWN": 0.0,
-    "LEFT": 1894.9999996119477,
-    "RIGHT": 1999.999999999987
-  },
-  "(False, True, True, False, True, False, False, False, False, False, False, False)": {
-    "UP": 1999.999999999987,
-    "DOWN": 1528.3671606963394,
-    "LEFT": 1224.7314173476493,
-    "RIGHT": 1894.9999999999798
-  },
-  "(False, True, False, False, False, False, True, False, False, False, False, True)": {
-    "UP": 0.0,
-    "DOWN": 0.0,
-    "LEFT": 1289.6783705898533,
-    "RIGHT": 477.4670096961432
-  },
-  "(False, False, True, False, True, False, False, False, False, False, False, False)": {
-    "UP": 1999.999999999987,
-    "DOWN": 1894.9999999959052,
-    "LEFT": 0.0,
-    "RIGHT": 1894.9999985003662
-  },
-  "(True, True, False, False, False, False, False, True, False, False, False, False)": {
-    "UP": 1684.9904438775968,
-    "DOWN": 1697.9936126808125,
-    "LEFT": 1894.9737904645267,
-    "RIGHT": 1999.9999999999388
-  },
-  "(False, False, False, True, False, True, True, False, False, False, False, False)": {
-    "UP": 1887.9138473435057,
-    "DOWN": 1999.9999305651381,
-    "LEFT": 1998.4511831974276,
-    "RIGHT": 0.0
-  },
-  "(False, True, False, False, False, False, True, False, False, False, False, False)": {
-    "UP": 1894.9999997721927,
-    "DOWN": 0.0,
-    "LEFT": 1999.999999999987,
-    "RIGHT": 1894.999999713552
-  },
-  "(True, False, True, False, False, False, False, False, False, False, False, True)": {
-    "UP": -329.18429438513857,
-    "DOWN": -99.54948457410578,
-    "LEFT": -688.3064696000428,
-    "RIGHT": -101.65550040954874
-  },
-  "(False, False, True, False, False, False, False, False, True, False, False, False)": {
-    "UP": -114.47223441866751,
-    "DOWN": -100.0,
-    "LEFT": -100.0,
-    "RIGHT": -100.0
-  },
-  "(True, True, False, False, False, False, True, False, False, False, False, False)": {
-    "UP": 1669.598193054815,
-    "DOWN": 1679.4842986746173,
-    "LEFT": 1999.9999999999338,
-    "RIGHT": 1894.9374123751356
-  },
-  "(False, True, False, True, True, False, True, False, False, False, False, False)": {
-    "UP": 1937.2202891710383,
-    "DOWN": 1224.2503095584232,
-    "LEFT": 1999.8587136980655,
-    "RIGHT": 1142.3187377727095
-  },
-  "(True, False, False, False, False, False, False, True, False, False, False, False)": {
-    "UP": 0.0,
-    "DOWN": 1894.999996567798,
-    "LEFT": 1894.9999968959148,
-    "RIGHT": 1999.999999999987
-  },
-  "(False, False, True, True, False, False, False, False, False, True, False, False)": {
-    "UP": -89.78615710014383,
-    "DOWN": -90.69139556688262,
-    "LEFT": -109.90311659183739,
-    "RIGHT": -190.67059096783572
-  },
-  "(False, True, True, False, True, False, False, True, False, False, False, False)": {
-    "UP": 1969.4885621184312,
-    "DOWN": 1035.4267804691779,
-    "LEFT": 1220.1155455521264,
-    "RIGHT": 1999.814938927023
-  },
-  "(False, True, True, False, False, False, False, True, False, False, False, False)": {
-    "UP": 1894.9999999999868,
-    "DOWN": 1638.5613112237397,
-    "LEFT": 1668.1929707526915,
-    "RIGHT": 1999.999999999987
-  },
-  "(False, True, True, True, False, False, False, False, False, False, False, False)": {
-    "UP": -99.9999999999992,
-    "DOWN": -816.173103236774,
-    "LEFT": -711.7942940103477,
-    "RIGHT": -786.1886074681676
-  },
-  "(True, False, False, False, False, False, False, False, False, True, False, False)": {
-    "UP": 0.0,
-    "DOWN": -19.71176962384829,
-    "LEFT": -4.999999999999998,
-    "RIGHT": -4.999999999999998
-  },
-  "(False, False, False, True, False, False, True, False, False, False, False, False)": {
-    "UP": 1894.999999999987,
-    "DOWN": 1894.999999999987,
-    "LEFT": 1999.999999999987,
-    "RIGHT": 0.0
-  },
-  "(False, False, True, True, False, False, False, False, True, False, False, False)": {
-    "UP": -99.16755768475913,
-    "DOWN": -94.17086400221831,
-    "LEFT": -128.43130120168837,
-    "RIGHT": -208.0240801515361
-  },
-  "(False, True, False, False, False, False, False, False, True, False, False, False)": {
-    "UP": -19.924442136274088,
-    "DOWN": 0.0,
-    "LEFT": -4.999999999999998,
-    "RIGHT": -4.999999999999998
-  },
-  "(True, True, False, True, False, False, False, False, False, False, False, False)": {
-    "UP": -618.0170828724779,
-    "DOWN": -725.2358705311332,
-    "LEFT": -99.9999999999992,
-    "RIGHT": -1045.1674764699799
-  },
-  "(False, True, True, False, False, False, False, False, True, False, False, False)": {
-    "UP": -101.32594216023601,
-    "DOWN": -539.1218728066578,
-    "LEFT": -737.0881160829765,
-    "RIGHT": -99.32462447864857
-  },
-  "(False, False, False, True, False, False, False, False, True, False, False, False)": {
-    "UP": -19.769415699078632,
-    "DOWN": -4.999999999999998,
-    "LEFT": -4.999999999999998,
-    "RIGHT": 0.0
-  },
-  "(False, False, True, False, False, False, False, False, False, True, False, False)": {
-    "UP": -4.999999999999998,
-    "DOWN": -19.815532559262905,
-    "LEFT": 0.0,
-    "RIGHT": -4.999999999999998
-  },
-  "(True, False, False, False, False, False, False, False, False, False, True, False)": {
-    "UP": 0.0,
-    "DOWN": -4.999999999999998,
-    "LEFT": -19.71176962384829,
-    "RIGHT": -4.999999999999998
-  },
-  "(False, False, False, True, False, False, True, False, False, True, False, False)": {
-    "UP": 1103.8588906720202,
-    "DOWN": 1205.9885656530669,
-    "LEFT": 1989.7786758960788,
-    "RIGHT": 0.0
-  },
-  "(True, False, False, True, False, False, True, False, False, False, False, False)": {
-    "UP": 1591.6212833276961,
-    "DOWN": 1894.9999999995969,
-    "LEFT": 1999.999999999987,
-    "RIGHT": 1656.2602253581151
-  },
-  "(True, False, False, False, False, True, True, False, False, False, False, False)": {
-    "UP": 0.0,
-    "DOWN": 1996.6818136821191,
-    "LEFT": 1999.999948120208,
-    "RIGHT": 1880.1374495113212
-  },
-  "(True, False, False, False, False, False, False, True, False, False, True, False)": {
-    "UP": 0.0,
-    "DOWN": 199.3770761974529,
-    "LEFT": 301.7019339240454,
-    "RIGHT": 1282.5034046362155
-  },
-  "(True, False, False, False, False, False, True, True, False, False, False, False)": {
-    "UP": 0.0,
-    "DOWN": 557.2419797330198,
-    "LEFT": 1795.723142002877,
-    "RIGHT": 1034.873665224898
-  },
-  "(False, False, True, True, False, True, False, False, False, False, False, False)": {
-    "UP": 1894.830021068069,
-    "DOWN": 1999.9999999982215,
-    "LEFT": 1684.8462059954252,
-    "RIGHT": 1672.4095097701936
-  },
-  "(True, False, False, False, False, False, False, False, False, False, False, True)": {
-    "UP": 0.0,
-    "DOWN": -4.999999999999998,
-    "LEFT": -4.999999999999998,
-    "RIGHT": -19.815532559262905
-  },
-  "(False, False, True, False, False, True, False, True, False, False, False, False)": {
-    "UP": 1894.3069901356803,
-    "DOWN": 1995.3318025852916,
-    "LEFT": 0.0,
-    "RIGHT": 1999.9999462029275
-  },
-  "(False, False, False, True, True, False, False, False, False, True, False, False)": {
-    "UP": 1282.5034046362155,
-    "DOWN": 163.54982872401106,
-    "LEFT": -1.0,
-    "RIGHT": 0.0
-  },
-  "(False, True, False, False, False, False, False, False, False, False, False, True)": {
-    "UP": -100.0,
-    "DOWN": -100.0,
-    "LEFT": -100.0,
-    "RIGHT": -114.3402930233344
-  },
-  "(True, False, True, True, False, False, False, False, False, False, False, False)": {
-    "UP": -709.7581091959465,
-    "DOWN": -99.9999999999992,
-    "LEFT": -696.6663701212462,
-    "RIGHT": -619.6223818887743
-  },
-  "(True, False, False, True, False, True, False, False, False, False, False, False)": {
-    "UP": 1491.5956321705005,
-    "DOWN": 1999.999999999987,
-    "LEFT": 1894.9999999999507,
-    "RIGHT": 1369.957299640848
-  },
-  "(False, True, False, False, False, False, False, False, False, False, True, False)": {
-    "UP": -4.999999999999998,
-    "DOWN": 0.0,
-    "LEFT": -18.900488372224,
-    "RIGHT": -4.999999999999998
-  },
-  "(False, False, True, False, False, False, False, False, False, False, False, True)": {
-    "UP": -4.999999999999998,
-    "DOWN": -4.999999999999998,
-    "LEFT": 0.0,
-    "RIGHT": -19.63971202981036
-  },
-  "(False, True, False, False, True, False, False, True, False, False, False, False)": {
-    "UP": 1999.1599437615835,
-    "DOWN": -100.0,
-    "LEFT": 1894.1372870814496,
-    "RIGHT": 1999.999989414185
+    "UP": -28.99999999999914,
+    "DOWN": -28.999999999999336,
+    "LEFT": -19.999999999999808,
+    "RIGHT": -19.999999999999808
   },
   "(True, False, True, False, False, True, False, False, False, False, False, False)": {
-    "UP": 1318.4898533682529,
-    "DOWN": 1999.999999999987,
-    "LEFT": 1377.376308673747,
-    "RIGHT": 1894.9999999999861
+    "UP": 84.99930759794813,
+    "DOWN": 99.9999999999992,
+    "LEFT": 84.9974050377642,
+    "RIGHT": 93.9999306892297
   },
-  "(False, False, False, True, False, False, False, False, False, True, False, False)": {
-    "UP": -4.999999999999998,
-    "DOWN": -19.54964003726295,
-    "LEFT": -4.999999999999998,
-    "RIGHT": 0.0
+  "(True, False, True, False, False, False, False, False, False, False, False, False)": {
+    "UP": -28.999999999999808,
+    "DOWN": -19.999999999999808,
+    "LEFT": -28.999999999999808,
+    "RIGHT": -19.999999999999808
   },
-  "(False, True, True, True, True, False, False, False, False, False, False, False)": {
-    "UP": 1999.9999994853006,
-    "DOWN": 1565.5396054942357,
-    "LEFT": 1456.0043317234663,
-    "RIGHT": 1290.231400476473
+  "(False, False, False, True, True, False, False, False, False, False, False, False)": {
+    "UP": 99.9999999999992,
+    "DOWN": 93.9674982711573,
+    "LEFT": 93.99944090234044,
+    "RIGHT": 84.98924999468079
   },
-  "(True, False, False, False, False, True, False, False, False, False, True, False)": {
-    "UP": 0.0,
-    "DOWN": 1985.6149775813992,
-    "LEFT": 1354.1115365075038,
-    "RIGHT": 1556.5269108024424
+  "(False, True, False, False, True, False, False, False, False, False, False, False)": {
+    "UP": 99.9999999999992,
+    "DOWN": 84.9999999999992,
+    "LEFT": 93.9999999999992,
+    "RIGHT": 93.9999999999992
   },
-  "(False, False, False, True, False, False, True, False, True, False, False, False)": {
-    "UP": 1377.4672925379389,
-    "DOWN": 1740.1634365848215,
-    "LEFT": 1991.2969741608367,
-    "RIGHT": 0.0
+  "(True, False, False, False, False, False, False, False, False, False, False, False)": {
+    "UP": -28.999999999999808,
+    "DOWN": -19.999999999999808,
+    "LEFT": -19.999999999999808,
+    "RIGHT": -19.999999999999808
   },
-  "(True, True, False, True, False, False, True, False, False, False, False, False)": {
-    "UP": 1505.3359480912243,
-    "DOWN": 1501.725276560039,
-    "LEFT": 1999.9999999853512,
-    "RIGHT": 1646.2095943816303
+  "(False, True, False, False, False, False, True, False, False, False, False, False)": {
+    "UP": 93.9864711163365,
+    "DOWN": 84.99944058477405,
+    "LEFT": 99.9999999999992,
+    "RIGHT": 93.99054539396606
   },
-  "(False, False, True, False, True, False, False, False, False, False, False, True)": {
-    "UP": 1206.6443871559495,
-    "DOWN": 469.3132142182179,
-    "LEFT": 0.0,
-    "RIGHT": 187.96130935192116
+  "(True, False, False, False, False, False, False, True, False, False, False, False)": {
+    "UP": 84.99294981396189,
+    "DOWN": 93.95127032081216,
+    "LEFT": 93.98113925764326,
+    "RIGHT": 99.9999999999992
   },
-  "(True, False, True, False, False, False, False, False, False, True, False, False)": {
-    "UP": -491.1440140563397,
-    "DOWN": -102.62674528090106,
-    "LEFT": -509.434500234168,
-    "RIGHT": -99.24253567600039
+  "(False, True, False, False, False, False, False, True, False, False, False, False)": {
+    "UP": 93.96967388751688,
+    "DOWN": 84.99693909972156,
+    "LEFT": 93.95870446004862,
+    "RIGHT": 99.9999999999992
   },
-  "(False, False, False, True, True, False, False, False, False, False, True, False)": {
-    "UP": 1122.764996380178,
-    "DOWN": 173.15967113259546,
-    "LEFT": 372.67376461576737,
-    "RIGHT": 0.0
+  "(False, False, True, False, False, False, False, True, False, False, False, False)": {
+    "UP": 93.9999999999992,
+    "DOWN": 93.9999999999992,
+    "LEFT": 84.9999999999992,
+    "RIGHT": 99.9999999999992
   },
-  "(False, False, True, False, True, False, False, True, False, False, False, False)": {
-    "UP": 1999.9999875538258,
-    "DOWN": 1891.3851042933986,
-    "LEFT": 0.0,
-    "RIGHT": 1999.1048090821414
+  "(False, True, True, False, True, False, False, False, False, False, False, False)": {
+    "UP": 99.9999999999992,
+    "DOWN": 84.99630565538827,
+    "LEFT": 84.99979989145835,
+    "RIGHT": 93.99853945594566
   },
-  "(False, True, False, False, True, False, True, False, False, False, False, False)": {
-    "UP": 1997.8204638920822,
-    "DOWN": 0.0,
-    "LEFT": 1999.9999949098767,
-    "RIGHT": 1894.237967969108
+  "(False, True, False, True, False, False, False, False, False, False, False, False)": {
+    "UP": -19.999999999999808,
+    "DOWN": -28.999999999999808,
+    "LEFT": -19.999999999999808,
+    "RIGHT": -28.999999999999808
   },
-  "(False, False, False, True, True, False, True, False, False, False, False, False)": {
-    "UP": 1988.6884026635237,
-    "DOWN": 1888.1503427282662,
-    "LEFT": 1999.999975586062,
-    "RIGHT": 0.0
+  "(False, False, False, True, False, True, True, False, False, False, False, False)": {
+    "UP": 87.37944611598235,
+    "DOWN": 98.42681844863702,
+    "LEFT": 99.99739312605071,
+    "RIGHT": 81.2393629885212
   },
-  "(True, False, False, True, False, False, False, False, False, False, True, False)": {
-    "UP": -715.4885606400001,
-    "DOWN": -100.0,
-    "LEFT": -114.175366279168,
-    "RIGHT": -195.16
+  "(True, False, False, False, False, True, False, False, False, False, False, False)": {
+    "UP": 84.9999999999992,
+    "DOWN": 99.9999999999992,
+    "LEFT": 93.9999999999992,
+    "RIGHT": 93.9999999999992
   },
-  "(True, False, False, False, False, False, False, True, False, True, False, False)": {
-    "UP": 0.0,
-    "DOWN": -4.0,
-    "LEFT": 206.7227786496971,
-    "RIGHT": 894.633045675229
+  "(False, False, True, False, False, True, False, False, False, False, False, False)": {
+    "UP": 93.98772588110549,
+    "DOWN": 99.9999999999992,
+    "LEFT": 84.99514659159831,
+    "RIGHT": 93.99170687984262
   },
-  "(False, True, False, False, True, False, False, False, False, False, False, True)": {
-    "UP": 1980.385159426699,
-    "DOWN": -100.0,
-    "LEFT": 1430.5505342039794,
-    "RIGHT": 1094.1009268558034
+  "(False, True, False, True, True, False, False, False, False, False, False, False)": {
+    "UP": 99.9999999999992,
+    "DOWN": 84.99948218535576,
+    "LEFT": 93.99975735016797,
+    "RIGHT": 84.99988289180122
   },
-  "(False, False, True, False, False, False, False, True, True, False, False, False)": {
-    "UP": 1170.1659607671363,
-    "DOWN": 1644.0408148955344,
-    "LEFT": -100.0,
-    "RIGHT": 1989.374933593973
+  "(True, False, False, False, False, False, False, False, False, True, False, False)": {
+    "UP": -25.182544927857858,
+    "DOWN": -19.19959729194471,
+    "LEFT": -18.95448547449137,
+    "RIGHT": -18.95812798568409
   },
-  "(True, False, True, False, False, True, False, True, False, False, False, False)": {
-    "UP": 961.770463549181,
-    "DOWN": 1999.8631102552185,
-    "LEFT": 727.5232599391519,
-    "RIGHT": 1787.1369981501746
+  "(True, False, False, False, False, False, True, False, False, False, False, False)": {
+    "UP": 84.99740550827543,
+    "DOWN": 93.79354602484356,
+    "LEFT": 99.9999999999992,
+    "RIGHT": 93.99966042935222
   },
-  "(False, False, False, True, True, False, True, False, False, True, False, False)": {
-    "UP": -100.0,
-    "DOWN": -100.0,
-    "LEFT": 399.0802998710821,
-    "RIGHT": -100.0
+  "(True, False, True, True, False, False, False, False, False, False, False, False)": {
+    "UP": -28.999197245734436,
+    "DOWN": -19.999999999999808,
+    "LEFT": -28.999971378668466,
+    "RIGHT": -28.999967120132446
   },
-  "(True, False, True, True, False, True, False, False, False, False, False, False)": {
-    "UP": 1634.491096113422,
-    "DOWN": 1999.9999904263782,
-    "LEFT": 1488.6874715183692,
-    "RIGHT": 1280.576676990357
+  "(False, False, True, False, False, False, False, False, True, False, False, False)": {
+    "UP": -18.039964251031673,
+    "DOWN": -17.453105459465835,
+    "LEFT": -20.93257093422845,
+    "RIGHT": -17.405910394911324
   },
-  "(True, True, False, False, False, False, False, False, False, False, False, True)": {
-    "UP": -146.49481288978654,
-    "DOWN": -143.13713184660674,
-    "LEFT": -88.31584148400667,
-    "RIGHT": -90.5717966916004
-  },
-  "(True, False, False, False, False, True, False, True, False, False, False, False)": {
-    "UP": -100.0,
-    "DOWN": 1997.0879504023385,
-    "LEFT": 1894.0809840769082,
-    "RIGHT": 1999.9999209894083
-  },
-  "(False, False, False, True, False, True, False, False, False, False, True, False)": {
-    "UP": 0.0,
-    "DOWN": 1095.9126994670487,
-    "LEFT": 163.85886735181165,
-    "RIGHT": 0.0
-  },
-  "(False, False, True, False, False, False, False, True, False, True, False, False)": {
-    "UP": 1517.5134656932146,
-    "DOWN": 1439.2932532373106,
-    "LEFT": 0.0,
-    "RIGHT": 1988.6980023306833
-  },
-  "(True, True, True, False, False, False, False, True, False, False, False, False)": {
-    "UP": 1552.2689967143351,
-    "DOWN": 1392.4920804798323,
-    "LEFT": 1574.0688255572659,
-    "RIGHT": 1999.9999999579184
-  },
-  "(True, False, False, True, False, True, True, False, False, False, False, False)": {
-    "UP": 1384.578133659782,
-    "DOWN": 1999.778240837329,
-    "LEFT": 1948.6156222203062,
-    "RIGHT": 1324.2147488118574
-  },
-  "(False, True, False, True, False, False, True, False, True, False, False, False)": {
-    "UP": 115.0382377082394,
-    "DOWN": 11.602677355135661,
-    "LEFT": 1414.0116139713753,
-    "RIGHT": -100.0
-  },
-  "(False, True, False, False, False, False, True, True, False, False, False, False)": {
-    "UP": 969.0614294643512,
-    "DOWN": 0.0,
-    "LEFT": 1824.3099816197023,
-    "RIGHT": 606.0485889078741
-  },
-  "(False, True, False, True, False, False, False, False, False, False, True, False)": {
-    "UP": -99.25081291965503,
-    "DOWN": -421.0431378178278,
-    "LEFT": -104.02359309721444,
-    "RIGHT": -280.2233049692839
-  },
-  "(True, True, True, True, False, False, False, False, False, False, False, False)": {
-    "UP": -14146.735474913501,
-    "DOWN": -14491.748792004539,
-    "LEFT": -14388.633342233015,
-    "RIGHT": -14626.670629079303
-  },
-  "(False, True, False, True, True, False, False, False, False, False, True, False)": {
-    "UP": 1310.775633304964,
-    "DOWN": 0.0,
-    "LEFT": 215.89299558118807,
-    "RIGHT": -36.2
-  },
-  "(True, False, False, True, False, False, False, False, False, True, False, False)": {
-    "UP": -399.44800000000004,
-    "DOWN": -114.3402930233344,
-    "LEFT": -100.0,
-    "RIGHT": -480.9584000000001
-  },
-  "(True, False, True, False, False, True, False, False, False, False, False, True)": {
-    "UP": 100.12682347233519,
-    "DOWN": 1297.8086005311818,
-    "LEFT": -139.0,
-    "RIGHT": -12.98012715320634
-  },
-  "(False, True, False, False, False, False, True, False, True, False, False, False)": {
-    "UP": 73.27149582459703,
-    "DOWN": -100.0,
-    "LEFT": 1215.7250110460338,
-    "RIGHT": -72.89407381488901
-  },
-  "(True, True, False, False, False, False, False, False, False, False, True, False)": {
-    "UP": -139.0,
-    "DOWN": -170.2,
-    "LEFT": -105.4,
-    "RIGHT": -100.0
-  },
-  "(False, True, False, False, False, False, False, True, False, False, True, False)": {
-    "UP": 269.0932371669589,
-    "DOWN": 0.0,
-    "LEFT": 493.75445059746403,
-    "RIGHT": 1351.108940273148
-  },
-  "(False, False, True, False, False, True, False, False, True, False, False, False)": {
-    "UP": 115.71766652882815,
-    "DOWN": 1097.2330715998228,
-    "LEFT": -100.0,
-    "RIGHT": 47.70037114991021
-  },
-  "(False, True, False, False, True, False, False, False, False, False, True, False)": {
-    "UP": 1975.034508974441,
-    "DOWN": -100.0,
-    "LEFT": 1276.163207954645,
-    "RIGHT": 968.3449464167998
-  },
-  "(True, False, True, True, False, False, False, False, False, True, False, False)": {
-    "UP": -697.4444568913439,
-    "DOWN": -301.8640042231195,
-    "LEFT": -437.204,
-    "RIGHT": -398.0
-  },
-  "(False, False, False, True, False, True, True, False, True, False, False, False)": {
-    "UP": -63.639963449227864,
-    "DOWN": 93.79110992471445,
-    "LEFT": 462.162923725765,
-    "RIGHT": -100.0
-  },
-  "(True, False, False, False, False, True, False, False, False, False, False, True)": {
-    "UP": -100.0,
-    "DOWN": 1979.5805516896735,
-    "LEFT": 903.7102107425411,
-    "RIGHT": 432.2866656851636
-  },
-  "(True, False, False, False, False, False, True, False, False, False, False, True)": {
-    "UP": -100.0,
-    "DOWN": -100.0,
-    "LEFT": 1115.1981334749864,
-    "RIGHT": 125.48764536024743
-  },
-  "(False, False, False, True, True, True, False, False, False, False, False, False)": {
-    "UP": 743.7576619270831,
-    "DOWN": 1829.7771160594173,
-    "LEFT": 945.634548099297,
-    "RIGHT": -100.0
-  },
-  "(False, True, True, False, False, False, False, False, False, False, False, True)": {
-    "UP": -99.43092339626246,
-    "DOWN": -481.71501362025566,
-    "LEFT": -539.4962269379536,
-    "RIGHT": -109.4673722869454
-  },
-  "(False, False, True, True, True, True, False, False, False, False, False, False)": {
-    "UP": 1553.2760232190597,
-    "DOWN": 538.4967176122934,
-    "LEFT": 98.51194290134868,
-    "RIGHT": 148.66220665456132
+  "(True, False, False, True, False, False, False, False, False, False, False, False)": {
+    "UP": -28.999999999999808,
+    "DOWN": -19.999999999999808,
+    "LEFT": -19.999999999999808,
+    "RIGHT": -28.999999999999808
   },
   "(False, True, False, True, False, False, False, False, True, False, False, False)": {
-    "UP": -114.3402930233344,
-    "DOWN": -406.6274688,
-    "LEFT": -100.0,
-    "RIGHT": -391.1024
+    "UP": -17.62375919760266,
+    "DOWN": -19.11463881435737,
+    "LEFT": -17.4209508137529,
+    "RIGHT": -19.115465829560886
   },
-  "(False, True, False, False, True, False, False, True, False, False, True, False)": {
-    "UP": -48.17513307674012,
-    "DOWN": -100.0,
-    "LEFT": -100.0,
-    "RIGHT": 566.6353504781868
+  "(False, True, True, False, False, False, False, False, False, False, False, False)": {
+    "UP": -19.999999999999808,
+    "DOWN": -28.999999999999808,
+    "LEFT": -28.999999999999808,
+    "RIGHT": -19.999999999999808
   },
-  "(False, False, True, False, True, False, False, False, False, True, False, False)": {
-    "UP": 1338.9007363199999,
-    "DOWN": 465.63243240659443,
-    "LEFT": -100.0,
-    "RIGHT": 284.8289923167265
+  "(True, False, False, True, False, True, False, False, False, False, False, False)": {
+    "UP": 84.99981713010978,
+    "DOWN": 99.9999999999992,
+    "LEFT": 93.99766890684423,
+    "RIGHT": 84.99996468714865
   },
-  "(True, False, True, False, False, False, False, True, False, True, False, False)": {
-    "UP": -100.0,
-    "DOWN": 171.9755985674961,
-    "LEFT": -100.0,
-    "RIGHT": 1389.9741619490749
+  "(True, True, False, True, False, False, False, False, False, False, False, False)": {
+    "UP": -28.999679793658093,
+    "DOWN": -28.999912572736676,
+    "LEFT": -19.999999999999808,
+    "RIGHT": -28.999995878419302
   },
-  "(False, False, True, False, True, True, False, False, False, False, False, False)": {
-    "UP": 824.9183297671095,
-    "DOWN": 1853.598386515767,
-    "LEFT": -100.0,
-    "RIGHT": 880.5555529596965
-  },
-  "(False, True, True, True, False, False, False, False, True, False, False, False)": {
-    "UP": -338.6969614761277,
-    "DOWN": -656.1741066862652,
-    "LEFT": -508.6530433015125,
-    "RIGHT": -529.6957342660887
-  },
-  "(False, False, True, True, False, True, False, False, True, False, False, False)": {
-    "UP": -100.0,
-    "DOWN": 522.7598405009041,
-    "LEFT": -100.0,
-    "RIGHT": -100.0
-  },
-  "(False, True, True, False, False, False, False, True, True, False, False, False)": {
-    "UP": 237.58567773618108,
-    "DOWN": 104.87521668838332,
-    "LEFT": 302.0220220053129,
-    "RIGHT": 1408.0925393650255
-  },
-  "(False, True, False, False, False, False, False, True, True, False, False, False)": {
-    "UP": 77.4676546892253,
-    "DOWN": -100.0,
-    "LEFT": -100.0,
-    "RIGHT": 896.247376196319
-  },
-  "(True, False, False, True, False, True, False, False, False, False, True, False)": {
-    "UP": 0.0,
-    "DOWN": 1413.1545569495672,
-    "LEFT": 302.94008422849305,
-    "RIGHT": 211.8667388710863
-  },
-  "(False, False, False, True, False, True, False, False, True, False, False, False)": {
-    "UP": 227.09684369992476,
-    "DOWN": 1239.0187624929556,
-    "LEFT": 175.42523065062397,
-    "RIGHT": -100.0
-  },
-  "(True, True, True, False, False, False, False, False, False, False, False, True)": {
-    "UP": -558.5667220659077,
-    "DOWN": -600.9871273122353,
-    "LEFT": -560.5821052638246,
-    "RIGHT": -350.5615057681589
-  },
-  "(True, False, False, True, False, False, True, False, False, True, False, False)": {
-    "UP": -100.0,
-    "DOWN": -85.8450299101,
-    "LEFT": 1304.83051452587,
-    "RIGHT": -100.0
-  },
-  "(True, True, False, False, False, False, False, True, False, False, True, False)": {
-    "UP": -100.0,
-    "DOWN": -139.0,
-    "LEFT": -1.5404489819238876,
-    "RIGHT": 636.8844804263548
-  },
-  "(False, True, True, False, True, False, False, False, False, False, False, True)": {
-    "UP": 1358.5360455505593,
-    "DOWN": -100.0,
-    "LEFT": -69.6412809103991,
-    "RIGHT": -68.49338174597271
-  },
-  "(True, False, False, False, False, False, True, False, False, True, False, False)": {
-    "UP": -100.0,
-    "DOWN": 79.8676546892253,
-    "LEFT": 1097.2330715998228,
-    "RIGHT": 144.77397674898134
-  },
-  "(True, True, False, False, False, False, True, False, False, False, False, True)": {
-    "UP": -100.0,
-    "DOWN": -23.510737681644656,
-    "LEFT": 767.2227579312821,
-    "RIGHT": -100.0
-  },
-  "(True, False, False, False, False, True, True, False, False, False, False, True)": {
-    "UP": -100.0,
-    "DOWN": -100.0,
-    "LEFT": 382.9093938091738,
-    "RIGHT": -100.0
+  "(False, False, True, False, False, True, False, True, False, False, False, False)": {
+    "UP": 86.99700663615023,
+    "DOWN": 99.9979271694385,
+    "LEFT": 82.82440870925087,
+    "RIGHT": 97.73224897756413
   },
   "(False, False, True, False, False, True, False, False, False, False, False, True)": {
-    "UP": -100.0,
-    "DOWN": 1001.7859117880146,
-    "LEFT": -100.0,
-    "RIGHT": 68.72912021161338
+    "UP": 1.958687437393544,
+    "DOWN": 42.46452500230712,
+    "LEFT": -0.9411087381844818,
+    "RIGHT": 4.535159011611281
   },
-  "(False, False, True, False, False, True, False, True, True, False, False, False)": {
-    "UP": -100.0,
-    "DOWN": -100.0,
-    "LEFT": -100.0,
-    "RIGHT": 399.0802998710821
+  "(False, True, True, True, False, False, False, False, False, False, False, False)": {
+    "UP": -19.999999999999808,
+    "DOWN": -28.99995113517921,
+    "LEFT": -28.999993607807475,
+    "RIGHT": -28.999806839884688
   },
-  "(False, True, False, False, False, False, True, True, True, False, False, False)": {
-    "UP": -100.0,
-    "DOWN": -100.0,
-    "LEFT": -100.0,
-    "RIGHT": -58.209999999999994
+  "(False, False, True, False, False, False, False, False, False, True, False, False)": {
+    "UP": -17.00110071233433,
+    "DOWN": -17.2759573223184,
+    "LEFT": -18.63678478055358,
+    "RIGHT": -16.98021486374771
   },
-  "(True, True, False, True, False, False, False, False, False, False, True, False)": {
-    "UP": -336.01,
-    "DOWN": -786.9781523819581,
-    "LEFT": -322.754617970815,
-    "RIGHT": -365.3463969002182
+  "(True, False, False, False, False, True, False, True, False, False, False, False)": {
+    "UP": 77.03307250860279,
+    "DOWN": 99.99702356229356,
+    "LEFT": 85.25744582495855,
+    "RIGHT": 90.92488449426246
   },
-  "(True, True, False, False, False, False, True, True, False, False, False, False)": {
-    "UP": -32.18904449210466,
-    "DOWN": 16.164221426386717,
-    "LEFT": 1688.8955177500811,
-    "RIGHT": 1109.9477918719715
+  "(False, False, False, True, False, False, True, False, False, False, False, False)": {
+    "UP": 93.9999999999992,
+    "DOWN": 93.9999999999992,
+    "LEFT": 99.9999999999992,
+    "RIGHT": 84.9999999999992
   },
-  "(False, True, False, False, True, False, True, False, False, False, False, True)": {
-    "UP": -100.0,
-    "DOWN": -100.0,
-    "LEFT": 316.57576196800346,
-    "RIGHT": -100.0
+  "(False, False, False, True, False, False, False, False, False, False, True, False)": {
+    "UP": -18.66651709401296,
+    "DOWN": -18.64620211056286,
+    "LEFT": -18.65675636322105,
+    "RIGHT": -23.55956576050715
   },
-  "(False, False, True, True, True, False, False, False, False, True, False, False)": {
-    "UP": 690.5966707284796,
-    "DOWN": 3.8109555078953576,
-    "LEFT": -100.0,
-    "RIGHT": -100.0
+  "(False, False, True, True, False, True, False, False, False, False, False, False)": {
+    "UP": 93.13313342597084,
+    "DOWN": 99.99998961727476,
+    "LEFT": 82.65122366774939,
+    "RIGHT": 83.81329429778084
   },
-  "(False, False, True, False, True, False, False, True, False, True, False, False)": {
-    "UP": 0.0,
-    "DOWN": 54.24103609079216,
-    "LEFT": 0.0,
-    "RIGHT": 412.77143271268886
+  "(True, False, True, False, False, False, False, True, False, False, False, False)": {
+    "UP": 84.99691054662587,
+    "DOWN": 93.99378670616787,
+    "LEFT": 84.99966347182902,
+    "RIGHT": 99.9999999999992
   },
-  "(True, False, False, False, False, True, False, True, False, False, True, False)": {
-    "UP": -100.0,
-    "DOWN": -100.0,
-    "LEFT": -48.153488207364816,
-    "RIGHT": 333.4100043483234
+  "(False, False, True, False, True, False, False, False, False, False, False, False)": {
+    "UP": 99.9999999999992,
+    "DOWN": 93.98985605237367,
+    "LEFT": 84.98806304429888,
+    "RIGHT": 93.98594256071752
+  },
+  "(True, True, False, False, False, False, True, False, False, False, False, False)": {
+    "UP": 83.52292029871211,
+    "DOWN": 83.97052870086254,
+    "LEFT": 99.99997859193836,
+    "RIGHT": 93.16198764309607
+  },
+  "(True, True, True, False, False, False, False, False, False, False, False, False)": {
+    "UP": -28.999481427487076,
+    "DOWN": -28.999997452033305,
+    "LEFT": -28.99998971049684,
+    "RIGHT": -19.999999999999808
+  },
+  "(True, True, False, False, False, False, False, True, False, False, False, False)": {
+    "UP": 78.1702944719932,
+    "DOWN": 84.20561182828975,
+    "LEFT": 90.99042983946278,
+    "RIGHT": 99.99988646362023
+  },
+  "(False, False, True, True, False, False, False, False, False, True, False, False)": {
+    "UP": -13.829110587306968,
+    "DOWN": -13.806646051894106,
+    "LEFT": -15.33584317718693,
+    "RIGHT": -15.176065379364262
+  },
+  "(False, False, True, False, True, True, False, False, False, False, False, False)": {
+    "UP": 76.47833707595893,
+    "DOWN": 26.461828811654065,
+    "LEFT": -1.8100000000000003,
+    "RIGHT": 19.04708808274861
+  },
+  "(True, False, False, False, False, False, False, False, False, False, True, False)": {
+    "UP": -23.793067773322807,
+    "DOWN": -18.1103791138024,
+    "LEFT": -18.923056687729954,
+    "RIGHT": -18.123352559699644
+  },
+  "(True, False, False, False, False, True, True, False, False, False, False, False)": {
+    "UP": 77.16167679981648,
+    "DOWN": 99.9970589819023,
+    "LEFT": 70.53111920783431,
+    "RIGHT": 92.6268425559633
+  },
+  "(True, False, True, True, False, True, False, False, False, False, False, False)": {
+    "UP": 75.33259750517782,
+    "DOWN": 99.99891052753762,
+    "LEFT": 81.60412690477187,
+    "RIGHT": 83.58528466549059
+  },
+  "(False, False, False, True, True, False, True, False, False, False, False, False)": {
+    "UP": 99.99857363160272,
+    "DOWN": 89.41398431926251,
+    "LEFT": 94.39004413494474,
+    "RIGHT": 80.03200366280805
+  },
+  "(False, True, False, False, False, False, False, False, True, False, False, False)": {
+    "UP": -20.764703624207826,
+    "DOWN": -24.770735670609398,
+    "LEFT": -19.08452527938608,
+    "RIGHT": -19.073246139976078
+  },
+  "(False, False, False, True, False, False, True, False, True, False, False, False)": {
+    "UP": 54.46466946009012,
+    "DOWN": 35.90004871687406,
+    "LEFT": 92.66921309561114,
+    "RIGHT": 10.670274661170861
+  },
+  "(True, False, True, False, False, False, False, False, False, True, False, False)": {
+    "UP": -69.77457989222037,
+    "DOWN": -58.37811141058135,
+    "LEFT": -78.71472095780791,
+    "RIGHT": -32.19697250654959
+  },
+  "(True, False, False, True, False, False, False, False, False, False, True, False)": {
+    "UP": -20.227836868521692,
+    "DOWN": -18.03157111016451,
+    "LEFT": -18.70625301016618,
+    "RIGHT": -18.27498888306615
+  },
+  "(False, False, False, True, False, False, False, False, True, False, False, False)": {
+    "UP": -18.294187686393578,
+    "DOWN": -17.81563261087857,
+    "LEFT": -17.786076139250614,
+    "RIGHT": -22.133561403413168
+  },
+  "(False, True, False, False, False, False, False, False, False, False, False, True)": {
+    "UP": -45.04114040756646,
+    "DOWN": -55.0231705959501,
+    "LEFT": -20.642663143238927,
+    "RIGHT": -74.5941444944679
+  },
+  "(True, False, False, True, False, False, True, False, False, False, False, False)": {
+    "UP": 84.99912627375363,
+    "DOWN": 93.99996909654254,
+    "LEFT": 99.9999999999992,
+    "RIGHT": 84.99990441995793
+  },
+  "(False, True, False, False, True, False, True, False, False, False, False, False)": {
+    "UP": 99.99541602909062,
+    "DOWN": 77.45425338184609,
+    "LEFT": 86.17018595569753,
+    "RIGHT": 83.58192608345787
+  },
+  "(False, True, False, True, True, False, True, False, False, False, False, False)": {
+    "UP": 24.732830210847954,
+    "DOWN": 39.474200866859306,
+    "LEFT": 98.67262968840097,
+    "RIGHT": 4.101194564629864
+  },
+  "(False, True, True, True, True, False, False, False, False, False, False, False)": {
+    "UP": 99.99936043959163,
+    "DOWN": 80.27099832264206,
+    "LEFT": 82.47356862096363,
+    "RIGHT": 80.20408069212019
+  },
+  "(False, False, True, False, False, False, False, False, False, False, False, True)": {
+    "UP": -18.879279356869684,
+    "DOWN": -18.876700680092327,
+    "LEFT": -21.630059554934864,
+    "RIGHT": -19.870080988036175
+  },
+  "(True, False, True, False, False, True, False, True, False, False, False, False)": {
+    "UP": 7.953372760916167,
+    "DOWN": 43.76625222520385,
+    "LEFT": -18.909870663302755,
+    "RIGHT": 98.47208436335568
+  },
+  "(False, True, False, False, True, False, False, True, False, False, False, False)": {
+    "UP": 96.57050619852723,
+    "DOWN": 80.96432227984793,
+    "LEFT": 66.79890974912034,
+    "RIGHT": 99.99683855500477
   },
   "(True, False, False, False, False, False, True, True, False, True, False, False)": {
     "UP": -100.0,
     "DOWN": -100.0,
     "LEFT": -100.0,
-    "RIGHT": -17.251620999999993
+    "RIGHT": -98.0
   },
-  "(False, False, True, False, True, True, False, False, False, False, False, True)": {
-    "UP": -79.0,
+  "(False, False, False, True, False, False, True, False, False, True, False, False)": {
+    "UP": 12.048505563967025,
+    "DOWN": -38.61714659124292,
+    "LEFT": 89.15482837918722,
+    "RIGHT": -50.907817016066474
+  },
+  "(True, False, False, False, False, False, True, True, False, False, False, False)": {
+    "UP": -1.0688109481,
+    "DOWN": 6.833351007138581,
+    "LEFT": 27.26699797185137,
+    "RIGHT": 76.47833707595893
+  },
+  "(False, False, True, True, True, False, False, False, False, False, False, False)": {
+    "UP": 99.99998481662153,
+    "DOWN": 89.72081450795639,
+    "LEFT": 84.44052052905644,
+    "RIGHT": 82.75320838233023
+  },
+  "(False, True, True, False, False, False, False, True, False, False, False, False)": {
+    "UP": 93.99890238121223,
+    "DOWN": 84.99892036890688,
+    "LEFT": 84.99975555038222,
+    "RIGHT": 99.9999999999992
+  },
+  "(True, False, False, False, False, True, False, False, False, False, False, True)": {
+    "UP": 33.29566866469652,
+    "DOWN": 94.35497779091715,
+    "LEFT": 48.573450498319886,
+    "RIGHT": 34.13323705634971
+  },
+  "(True, False, False, False, False, False, False, False, False, False, False, True)": {
+    "UP": -22.19368256414334,
+    "DOWN": -17.75861010126206,
+    "LEFT": -17.779477254560838,
+    "RIGHT": -18.085636851357634
+  },
+  "(False, False, False, True, False, False, False, False, False, True, False, False)": {
+    "UP": -18.17290961851435,
+    "DOWN": -19.83796550818913,
+    "LEFT": -18.164305266596394,
+    "RIGHT": -20.390144472113963
+  },
+  "(False, False, True, True, False, False, False, False, True, False, False, False)": {
+    "UP": -14.509416185226598,
+    "DOWN": -14.350137192710497,
+    "LEFT": -15.44896030968597,
+    "RIGHT": -15.189016782880902
+  },
+  "(False, False, True, False, True, False, False, True, False, False, False, False)": {
+    "UP": 99.99699349726623,
+    "DOWN": 86.18511551914872,
+    "LEFT": 80.52470466661738,
+    "RIGHT": 96.28312322521533
+  },
+  "(False, True, False, True, False, False, False, False, False, False, True, False)": {
+    "UP": -17.35629530842931,
+    "DOWN": -18.095793882083086,
+    "LEFT": -17.552684982797434,
+    "RIGHT": -20.266307829315785
+  },
+  "(False, True, True, False, False, False, False, False, True, False, False, False)": {
+    "UP": -53.74488990159206,
+    "DOWN": -95.47001938817084,
+    "LEFT": -81.70531188435477,
+    "RIGHT": -27.7706103752039
+  },
+  "(False, False, True, False, True, False, False, False, False, True, False, False)": {
+    "UP": 36.38145139361287,
+    "DOWN": 0.0,
+    "LEFT": -2.7213125626064563,
+    "RIGHT": 2.784079325705389
+  },
+  "(False, True, False, False, False, False, False, False, False, False, True, False)": {
+    "UP": -20.575400896743957,
+    "DOWN": -48.97792664353845,
+    "LEFT": -46.41365511620595,
+    "RIGHT": -33.57495415082159
+  },
+  "(False, False, False, False, False, False, False, False, False, False, False, False)": {
+    "UP": -6.99250095133348,
+    "DOWN": -7.043418920417848,
+    "LEFT": -6.891480514293642,
+    "RIGHT": -6.9944552882822615
+  },
+  "(False, False, False, False, False, True, False, False, False, False, False, False)": {
+    "UP": -100.0,
+    "DOWN": -98.0,
+    "LEFT": -97.09723999999999,
+    "RIGHT": -100.0
+  },
+  "(False, False, False, False, False, False, False, False, False, False, True, False)": {
+    "UP": -100.0,
+    "DOWN": -98.408,
+    "LEFT": -99.49752,
+    "RIGHT": -100.0
+  },
+  "(False, False, False, False, False, False, False, True, False, False, False, False)": {
+    "UP": -97.81952534407539,
+    "DOWN": -96.81836118407539,
+    "LEFT": -95.91866134407539,
+    "RIGHT": -85.46544376406858
+  },
+  "(True, True, True, False, False, False, False, True, False, False, False, False)": {
+    "UP": 82.30908485397337,
+    "DOWN": 64.4821878616179,
+    "LEFT": 77.73367651015883,
+    "RIGHT": 99.98405519178583
+  },
+  "(False, False, True, False, False, True, False, False, True, False, False, False)": {
+    "UP": 3.860333543130977,
+    "DOWN": 36.38145139361287,
+    "LEFT": 2.6603335431309767,
+    "RIGHT": 0.0
+  },
+  "(True, True, True, True, False, False, False, False, False, False, False, False)": {
+    "UP": -196.85842870567637,
+    "DOWN": -196.92802988743682,
+    "LEFT": -196.9148565927291,
+    "RIGHT": -196.92920363349154
+  },
+  "(False, False, True, False, False, False, False, True, False, True, False, False)": {
+    "UP": -42.65961987234563,
+    "DOWN": -69.33442175037877,
+    "LEFT": -69.54549734727706,
+    "RIGHT": 86.60639945042708
+  },
+  "(False, False, False, True, True, True, False, False, False, False, False, False)": {
+    "UP": 38.91781624922821,
+    "DOWN": 79.1507538265238,
+    "LEFT": 0.0,
+    "RIGHT": 23.424474343861576
+  },
+  "(True, True, False, True, False, False, True, False, False, False, False, False)": {
+    "UP": 75.07866192202142,
+    "DOWN": 62.91185825089319,
+    "LEFT": 99.98656381326738,
+    "RIGHT": 66.09421345199159
+  },
+  "(False, False, False, False, False, False, False, False, False, False, False, True)": {
+    "UP": -100.0,
     "DOWN": -100.0,
+    "LEFT": -98.408,
+    "RIGHT": -100.0
+  },
+  "(False, False, False, False, False, False, True, False, False, False, False, False)": {
+    "UP": 4.3290665661828385,
+    "DOWN": 0.17810000000000004,
+    "LEFT": 26.769663034560228,
+    "RIGHT": 0.7456690519000001
+  },
+  "(True, True, False, False, False, False, False, False, False, False, True, False)": {
+    "UP": -99.65565880974113,
+    "DOWN": -99.13086909219508,
+    "LEFT": -85.52503335398411,
+    "RIGHT": -94.47430417726859
+  },
+  "(False, True, False, False, False, False, True, False, False, False, False, True)": {
+    "UP": -99.2,
+    "DOWN": -97.79673510750497,
+    "LEFT": -12.694458707701001,
+    "RIGHT": -91.93419168703302
+  },
+  "(False, True, True, False, True, False, False, True, False, False, False, False)": {
+    "UP": 67.46962581575404,
+    "DOWN": 24.94113467653422,
+    "LEFT": 52.336583548820855,
+    "RIGHT": 98.91433461338256
+  },
+  "(False, True, False, False, False, False, True, True, False, False, False, False)": {
+    "UP": -77.15122279017663,
+    "DOWN": -55.60084279699211,
+    "LEFT": 52.95667415191791,
+    "RIGHT": -43.65274929076757
+  },
+  "(True, False, False, False, False, True, False, False, False, False, True, False)": {
+    "UP": 2.6436445788005294,
+    "DOWN": 88.93675112311084,
+    "LEFT": 8.476576064467167,
+    "RIGHT": 11.364071480230411
+  },
+  "(False, False, False, True, False, True, False, False, False, False, True, False)": {
+    "UP": 10.501905331636717,
+    "DOWN": 41.29632180625153,
+    "LEFT": -0.8,
+    "RIGHT": -2.0
+  },
+  "(True, True, False, False, False, False, True, True, False, False, False, False)": {
+    "UP": -87.4192408792193,
+    "DOWN": -90.54925276639844,
+    "LEFT": 17.41006577322231,
+    "RIGHT": -76.0107004418812
+  },
+  "(True, False, False, True, False, True, True, False, False, False, False, False)": {
+    "UP": -14.578982543002944,
+    "DOWN": 99.20648940653734,
+    "LEFT": 72.09557615244081,
+    "RIGHT": 21.148856439733862
+  },
+  "(False, True, False, False, True, False, False, False, False, False, True, False)": {
+    "UP": 91.12965889190463,
+    "DOWN": 10.091018142033015,
+    "LEFT": -63.51958454294268,
+    "RIGHT": -50.72394915444539
+  },
+  "(False, True, False, False, False, False, False, True, True, False, False, False)": {
+    "UP": -99.60199999999999,
+    "DOWN": -100.0,
+    "LEFT": -93.86973551028026,
+    "RIGHT": -20.955000741853834
+  },
+  "(False, True, True, False, False, False, False, False, False, False, False, True)": {
+    "UP": -96.68346672341582,
+    "DOWN": -98.56773297194894,
+    "LEFT": -95.89875196769746,
+    "RIGHT": -81.8661043304213
+  },
+  "(True, True, False, True, False, False, False, False, False, False, True, False)": {
+    "UP": -19.123352448034225,
+    "DOWN": -18.772942014356488,
+    "LEFT": -18.39654833558757,
+    "RIGHT": -19.122914835181767
+  },
+  "(False, True, True, False, False, False, False, True, True, False, False, False)": {
+    "UP": -96.16651885033457,
+    "DOWN": -95.03184134858921,
+    "LEFT": -100.0,
+    "RIGHT": -13.920240495431875
+  },
+  "(True, False, True, True, False, False, False, False, False, True, False, False)": {
+    "UP": -100.81086141887546,
+    "DOWN": -90.61811085910225,
+    "LEFT": -99.46023003486413,
+    "RIGHT": -100.01744106322943
+  },
+  "(False, False, False, True, True, False, False, False, False, False, True, False)": {
+    "UP": -23.45802818845762,
+    "DOWN": -100.0,
+    "LEFT": -100.0,
+    "RIGHT": -93.1573427784589
+  },
+  "(False, False, True, False, True, False, False, False, False, False, False, True)": {
+    "UP": -17.40735638749692,
+    "DOWN": -75.1823506832078,
+    "LEFT": -99.871362,
+    "RIGHT": -76.58601029913413
+  },
+  "(True, True, False, False, False, False, False, False, False, False, False, True)": {
+    "UP": -100.0,
+    "DOWN": -100.0,
+    "LEFT": -95.44958373990532,
+    "RIGHT": -84.79984959168263
+  },
+  "(True, False, False, False, False, False, True, False, False, True, False, False)": {
+    "UP": -94.97305998913004,
+    "DOWN": -98.08764150017606,
+    "LEFT": -49.16019303598488,
+    "RIGHT": -100.0
+  },
+  "(False, True, False, False, True, False, False, False, False, False, False, True)": {
+    "UP": 89.04528119109821,
+    "DOWN": -33.61811603169913,
+    "LEFT": -21.686663165332188,
+    "RIGHT": 33.26577871051927
+  },
+  "(True, False, True, False, False, True, False, False, False, False, False, True)": {
+    "UP": -3.6,
+    "DOWN": 41.88335858818901,
+    "LEFT": -3.41,
+    "RIGHT": 2.1213286107705436
+  },
+  "(False, False, True, False, False, False, False, True, True, False, False, False)": {
+    "UP": 10.490894544837762,
+    "DOWN": -29.227285640934674,
+    "LEFT": -60.22027905331586,
+    "RIGHT": 86.87293210136357
+  },
+  "(False, False, True, False, False, True, False, True, True, False, False, False)": {
+    "UP": -96.811285677238,
+    "DOWN": -100.0,
+    "LEFT": -100.0,
+    "RIGHT": -72.01167092825769
+  },
+  "(True, False, False, False, False, False, False, True, False, True, False, False)": {
+    "UP": 0.0,
+    "DOWN": 0.0,
+    "LEFT": -0.2,
+    "RIGHT": 24.52807127963672
+  },
+  "(False, False, False, True, False, True, False, False, True, False, False, False)": {
+    "UP": -95.61970110655938,
+    "DOWN": -100.0,
+    "LEFT": -66.96294255499875,
+    "RIGHT": -100.0
+  },
+  "(False, True, False, False, False, False, False, True, False, False, True, False)": {
+    "UP": -0.2,
+    "DOWN": 0.0,
+    "LEFT": 1.351111007333046,
+    "RIGHT": 42.46452500230712
+  },
+  "(True, False, False, True, False, False, False, False, False, True, False, False)": {
+    "UP": -99.06622741906655,
+    "DOWN": -81.54171684659778,
+    "LEFT": -88.67267118600546,
+    "RIGHT": -93.53915308851478
+  },
+  "(False, False, True, True, True, True, False, False, False, False, False, False)": {
+    "UP": 2.0219453991589744,
+    "DOWN": -81.42839723719074,
+    "LEFT": -87.6658998779993,
+    "RIGHT": -95.83184134858922
+  },
+  "(False, True, False, True, True, False, False, False, False, False, True, False)": {
+    "UP": 40.70335535985003,
+    "DOWN": 0.6213941714162097,
+    "LEFT": 3.785373616800779,
+    "RIGHT": 3.276211713766143
+  },
+  "(False, False, False, True, True, False, False, False, False, True, False, False)": {
+    "UP": -100.0,
+    "DOWN": -90.83370151933705,
+    "LEFT": -97.8175048470427,
+    "RIGHT": -100.0
+  },
+  "(True, False, False, True, False, False, True, False, False, True, False, False)": {
+    "UP": -84.42839723719074,
+    "DOWN": -95.82285366183122,
+    "LEFT": -3.0274234847607167,
+    "RIGHT": -100.0
+  },
+  "(False, False, True, True, False, True, False, False, True, False, False, False)": {
+    "UP": -100.0,
+    "DOWN": -47.940074677656064,
+    "LEFT": -100.0,
+    "RIGHT": -101.0
+  },
+  "(True, False, False, False, False, False, False, True, False, False, True, False)": {
+    "UP": -100.47091627799848,
+    "DOWN": -100.0,
+    "LEFT": -92.47050789782398,
+    "RIGHT": -100.0
+  },
+  "(False, True, False, False, True, False, False, True, False, False, True, False)": {
+    "UP": -80.87641500176089,
+    "DOWN": -100.0,
+    "LEFT": -98.671362,
+    "RIGHT": -100.0
+  },
+  "(True, False, True, False, False, False, False, False, False, False, False, True)": {
+    "UP": -98.7765051546357,
+    "DOWN": -97.60843237364881,
+    "LEFT": -96.14184515370746,
+    "RIGHT": -82.21379607198678
+  },
+  "(False, True, True, False, True, False, False, False, False, False, False, True)": {
+    "UP": -96.79370746103947,
+    "DOWN": -100.50123408852211,
+    "LEFT": -100.0,
+    "RIGHT": -90.9431328478152
+  },
+  "(False, True, False, True, False, False, True, False, True, False, False, False)": {
+    "UP": -100.0,
+    "DOWN": -89.73101240998363,
+    "LEFT": -3.0274234847607167,
+    "RIGHT": -76.66399456966431
+  },
+  "(True, False, False, True, False, True, False, False, False, False, True, False)": {
+    "UP": -100.86578880546743,
+    "DOWN": -100.0,
+    "LEFT": -89.2244393483619,
+    "RIGHT": -99.3177581122046
+  },
+  "(False, True, False, False, False, False, True, False, True, False, False, False)": {
+    "UP": -92.98205256736803,
+    "DOWN": -100.60228536618311,
+    "LEFT": -96.79370746103947,
+    "RIGHT": -98.15492527663984
+  },
+  "(True, False, False, False, False, True, False, True, False, False, True, False)": {
+    "UP": -100.367362,
+    "DOWN": -100.0,
+    "LEFT": -100.0,
+    "RIGHT": -70.29155421897511
+  },
+  "(True, False, False, False, False, True, True, False, False, False, False, True)": {
+    "UP": -100.0,
+    "DOWN": -70.29155421897511,
+    "LEFT": -97.2438,
+    "RIGHT": -100.0
+  },
+  "(False, False, True, True, True, False, False, False, False, True, False, False)": {
+    "UP": -100.0,
+    "DOWN": -96.0326117907809,
+    "LEFT": -100.0,
+    "RIGHT": -101.20772574763689
+  },
+  "(True, True, True, False, False, False, False, False, False, False, False, True)": {
+    "UP": -100.84876227860198,
+    "DOWN": -101.5064298388261,
+    "LEFT": -100.98557693506743,
+    "RIGHT": -91.9791201293232
+  },
+  "(True, False, True, False, False, False, False, True, False, True, False, False)": {
+    "UP": -101.0,
+    "DOWN": -100.0,
+    "LEFT": -100.0,
+    "RIGHT": -13.920240495431875
+  },
+  "(True, True, False, False, False, False, False, True, False, False, True, False)": {
+    "UP": -98.16651885033457,
+    "DOWN": -100.0,
+    "LEFT": -100.0,
+    "RIGHT": -63.581387519446146
+  },
+  "(True, False, False, False, False, False, True, False, False, False, False, True)": {
+    "UP": -100.0,
+    "DOWN": -66.96294255499875,
+    "LEFT": -100.0,
+    "RIGHT": -100.0
+  },
+  "(True, True, False, False, False, False, True, False, False, False, False, True)": {
+    "UP": -100.0,
+    "DOWN": -100.0,
+    "LEFT": -60.32611790780916,
+    "RIGHT": -92.26196240248375
+  },
+  "(False, False, True, False, True, False, False, True, False, True, False, False)": {
+    "UP": -100.0,
+    "DOWN": -100.0,
+    "LEFT": -100.0,
+    "RIGHT": -70.29155421897511
+  },
+  "(False, True, True, True, False, False, False, False, True, False, False, False)": {
+    "UP": -90.40681045300612,
+    "DOWN": -100.75492527663984,
+    "LEFT": -101.71764636286947,
+    "RIGHT": -101.0
+  },
+  "(False, True, False, False, True, False, True, False, False, False, False, True)": {
+    "UP": -75.50420459979358,
+    "DOWN": -101.0,
+    "LEFT": -100.0,
+    "RIGHT": -100.0
+  },
+  "(False, False, False, False, True, False, False, False, False, False, False, False)": {
+    "UP": 2.7664872216359098,
+    "DOWN": -0.2,
+    "LEFT": -0.2,
+    "RIGHT": -0.2
+  },
+  "(False, False, False, False, False, False, False, False, True, False, False, False)": {
+    "UP": -100.0,
+    "DOWN": -100.0,
+    "LEFT": -100.0,
+    "RIGHT": -99.2
+  },
+  "(False, False, False, False, True, False, False, False, False, False, True, False)": {
+    "UP": -100.0,
+    "DOWN": -100.0,
+    "LEFT": -99.8,
+    "RIGHT": -100.0
+  },
+  "(False, False, False, True, True, False, True, False, False, True, False, False)": {
+    "UP": -100.0,
+    "DOWN": -96.85886386767851,
+    "LEFT": -97.40318413485892,
+    "RIGHT": -100.0
+  },
+  "(False, False, False, True, False, True, True, False, True, False, False, False)": {
+    "UP": -99.8,
+    "DOWN": -96.864285678,
+    "LEFT": -71.9786585873725,
+    "RIGHT": -100.0
+  },
+  "(False, True, False, False, False, False, True, True, True, False, False, False)": {
+    "UP": -100.0,
+    "DOWN": -101.0,
     "LEFT": -100.0,
     "RIGHT": -100.0
   },
   "(False, False, False, True, True, True, False, False, False, False, True, False)": {
-    "UP": -79.0,
-    "DOWN": -100.0,
+    "UP": -100.0,
+    "DOWN": -96.02,
     "LEFT": -100.0,
     "RIGHT": -100.0
+  },
+  "(False, False, False, False, True, False, True, False, False, False, False, False)": {
+    "UP": -94.62288466286702,
+    "DOWN": -100.0,
+    "LEFT": -100.0,
+    "RIGHT": -82.22570875193173
   }
 }
