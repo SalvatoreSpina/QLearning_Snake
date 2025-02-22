@@ -1,7 +1,7 @@
 # 🐍 Snake Q-Learning Agent
 
-![alt text](https://github.com/sspina/QLearning_Snake/blob/main/menu.jpg?raw=true)
-![alt text](https://github.com/sspina/QLearning_Snake/blob/main/game.jpg?raw=true)
+![alt text](https://github.com/sspina/QLearning_Snake/blob/main/menu.png?raw=true)
+![alt text](https://github.com/sspina/QLearning_Snake/blob/main/game.png?raw=true)
 
 ## 📝 Table of Contents
 
