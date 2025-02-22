@@ -1,7 +1,7 @@
 # 🐍 Snake Q-Learning Agent
 
-![alt text](https://github.com/sspina/QLearning_Snake/blob/main/menu.png?raw=true)
-![alt text](https://github.com/sspina/QLearning_Snake/blob/main/game.png?raw=true)
+![alt text](https://github.com/SalvatoreSpina/QLearning_Snake/blob/main/menu.png?raw=true)
+![alt text](https://github.com/SalvatoreSpina/QLearning_Snake/blob/main/game.png?raw=true)
 
 ## 📝 Table of Contents
 
@@ -47,26 +47,6 @@ Follow these steps to set up the project locally:
    git clone https://github.com/yourusername/snake-q-learning-agent.git
    cd snake-q-learning-agent
    ```
-
-2. **Create a Virtual Environment (Optional but Recommended)**
-
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install Dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-   *If a `requirements.txt` is not provided, install the necessary packages manually:*
-
-   ```bash
-   pip install pygame numpy
-   ```
-
 ## 🎮 Usage
 
 Run the game with default settings:
