@@ -3,7 +3,7 @@ import random
 import ast
 import numpy as np
 
-from config import DIRECTIONS
+from .config import DIRECTIONS
 
 
 class Agent:

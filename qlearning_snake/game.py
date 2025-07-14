@@ -1,5 +1,5 @@
-from Board import Board
-from config import DIRECTIONS
+from .board import Board
+from .config import DIRECTIONS
 
 
 class Game:

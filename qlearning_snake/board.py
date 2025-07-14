@@ -2,7 +2,7 @@ import random
 from enum import Enum
 from typing import List, Tuple
 
-from config import DIRECTIONS
+from .config import DIRECTIONS
 
 
 # CellType Enum

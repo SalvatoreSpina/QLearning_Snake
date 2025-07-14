@@ -1,15 +1,18 @@
 import os
+from pathlib import Path
 import pygame
 
-from Game import Game
-from Agent import Agent
-from Board import CellType
-from ConfigScreen import ConfigScreen
-from config import (
+from .game import Game
+from .agent import Agent
+from .board import CellType
+from .config_screen import ConfigScreen
+from .config import (
     BOARD_SIZE, PANEL_WIDTH, BACKGROUND_COLOR, TEXT_COLOR,
     SNAKE_COLOR, HEAD_COLOR, GREEN_APPLE_COLOR, RED_APPLE_COLOR, GRID_COLOR,
     DIRECTIONS
 )
+
+ASSETS_PATH = Path(__file__).resolve().parents[1] / "assets"
 
 
 class GameUI:
@@ -66,7 +69,8 @@ class GameUI:
         self.clock = pygame.time.Clock()
         self.font = pygame.font.Font(None, 30)
         # Load and scale the background image
-        self.background_image = pygame.image.load("assets/background.png")
+        bg_path = ASSETS_PATH / "background.png"
+        self.background_image = pygame.image.load(str(bg_path))
         self.background_image = pygame.transform.scale(
             self.background_image, (self.WINDOW_WIDTH, self.WINDOW_HEIGHT)
         )
