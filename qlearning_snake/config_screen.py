@@ -1,11 +1,14 @@
+from pathlib import Path
 import pygame
 
-from config import (BOARD_SIZE, BACKGROUND_COLOR, BUTTON_COLOR,
-                    BUTTON_HOVER_COLOR)
+from .config import (
+    BOARD_SIZE, BACKGROUND_COLOR, BUTTON_COLOR, BUTTON_HOVER_COLOR
+)
 
 pygame.init()
 WINDOW_WIDTH = pygame.display.Info().current_w
 WINDOW_HEIGHT = pygame.display.Info().current_h
+ASSETS_PATH = Path(__file__).resolve().parents[1] / "assets"
 
 
 class ConfigScreen:
@@ -15,12 +18,13 @@ class ConfigScreen:
         self.font = pygame.font.Font(None, 40)
 
         # Load and scale background image
-        self.background_image = pygame.image.load("assets/background.png")
+        bg_path = ASSETS_PATH / "background.png"
+        self.background_image = pygame.image.load(str(bg_path))
         self.background_image = pygame.transform.scale(
             self.background_image, (self.ui.WINDOW_WIDTH, self.ui.WINDOW_HEIGHT)
         )
 
-        self.title_image = pygame.image.load("assets/title.png")
+        self.title_image = pygame.image.load(str(ASSETS_PATH / "title.png"))
 
         self.options = {
             "Board Size": str(defaults.get('board_size', BOARD_SIZE)),

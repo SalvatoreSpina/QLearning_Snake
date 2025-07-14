@@ -1,7 +1,7 @@
 import argparse
 
-from config import BOARD_SIZE
-from GameUI import GameUI
+from qlearning_snake.config import BOARD_SIZE
+from qlearning_snake.game_ui import GameUI
 
 
 def main():
